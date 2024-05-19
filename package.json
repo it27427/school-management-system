@@ -11,5 +11,8 @@
     "school management"
   ],
   "author": "Istiak Hossain Tushar",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
 }
