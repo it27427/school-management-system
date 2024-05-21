@@ -1,4 +1,5 @@
 import HeroThumb from '@/assets/images/hero/hero.png';
+import Button from './Button';
 
 const Hero = () => {
   return (
@@ -15,7 +16,7 @@ const Hero = () => {
         </div>
 
         <div className='overflow-hidden'>
-          <button className='btn btn-neutral'>Admin Register</button>
+          <Button classes='btn btn-neutral'>Admin Register</Button>
         </div>
       </div>
 
