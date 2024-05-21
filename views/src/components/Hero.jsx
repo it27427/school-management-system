@@ -15,7 +15,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <Button className='btn btn-info'>Admin Register</Button>
+        <Button className='btn btn-primary'>Admin Register</Button>
       </div>
 
       <figure>
