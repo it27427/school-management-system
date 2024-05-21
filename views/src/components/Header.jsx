@@ -1,10 +1,12 @@
-import React from 'react';
+import Navbar from './Navbar';
 
 const Header = () => {
   return (
-    <div>
-      <h1>Header Component</h1>
-    </div>
+    <header className='sticky top-0 z-50'>
+      <div className='container'>
+        <Navbar />
+      </div>
+    </header>
   );
 };
 
