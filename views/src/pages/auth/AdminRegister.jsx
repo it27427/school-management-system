@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AdminRegisterPage = () => {
+const AdminRegister = () => {
   return (
     <div>
       <h1>Admin Register Page</h1>
@@ -8,4 +8,4 @@ const AdminRegisterPage = () => {
   );
 };
 
-export default AdminRegisterPage;
+export default AdminRegister;
