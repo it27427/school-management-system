@@ -11,7 +11,7 @@ const NotFound = () => {
   };
 
   return (
-    <div className='flex flex-col gap-6 items-center justify-center w-screen h-screen bg-red-200'>
+    <div className='flex flex-col gap-6 items-center justify-center w-screen h-screen bg-red-100'>
       <figure className='w-72 h-72 flex items-center justify-center'>
         <img
           src={notfound}
