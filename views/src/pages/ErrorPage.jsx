@@ -1,10 +1,10 @@
-import React from 'react';
+import NotFound from '@/components/NotFound';
 
 const ErrorPage = () => {
   return (
-    <div>
-      <h1>Error Page</h1>
-    </div>
+    <>
+      <NotFound />
+    </>
   );
 };
 
