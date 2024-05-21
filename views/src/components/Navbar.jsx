@@ -1,5 +1,6 @@
 import BrandLogo from './BrandLogo';
 import DesktopList from './DesktopList';
+import AuthList from './AuthList';
 
 const Navbar = () => {
   return (
@@ -8,6 +9,10 @@ const Navbar = () => {
 
       <div className='hidden lg:flex items-center'>
         <DesktopList />
+      </div>
+
+      <div className='hidden lg:flex items-center'>
+        <AuthList />
       </div>
     </nav>
   );

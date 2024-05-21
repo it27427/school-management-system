@@ -15,9 +15,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className='overflow-hidden'>
-          <Button classes='btn btn-neutral'>Admin Register</Button>
-        </div>
+        <Button classes='btn btn-info'>Admin Register</Button>
       </div>
 
       <figure>
