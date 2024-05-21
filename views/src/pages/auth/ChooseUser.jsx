@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ChooseUser = () => {
   return (
     <EmptyLayout>
-      <div className='grid place-items-center space-y-0 h-screen md:space-y-0 lg:grid-cols-3 lg:space-x-3 p-5'>
+      <div className='grid place-items-center space-y-0 h-screen md:space-y-0 lg:grid-cols-3 lg:space-x-3 p-5 bg-sky-300'>
         <div className='flex flex-col items-center justify-center text-center gap-3'>
           <h2 className='font-bold uppercase text-black'>Admin</h2>
           <Link to='/admin-login' className='btn btn-primary'>
