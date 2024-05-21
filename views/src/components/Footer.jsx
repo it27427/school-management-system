@@ -1,10 +1,12 @@
-import React from 'react';
+import Copyright from './Copyright';
 
 const Footer = () => {
   return (
-    <div>
-      <h1>Footer Component</h1>
-    </div>
+    <footer className='footer footer-center p-4 bg-sky-950 text-base-content'>
+      <aside>
+        <Copyright />
+      </aside>
+    </footer>
   );
 };
 

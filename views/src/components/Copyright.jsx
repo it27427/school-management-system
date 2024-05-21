@@ -1,10 +1,12 @@
-import React from 'react';
-
 const Copyright = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <div>
-      <h1>Copyright Component</h1>
-    </div>
+    <>
+      <p className='font-medium text-white text-sm text-center'>
+        &copy; Copyright {currentYear} eSkooly - all rights reserved.
+      </p>
+    </>
   );
 };
 
