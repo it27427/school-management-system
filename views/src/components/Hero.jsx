@@ -1,7 +1,15 @@
+import { useNavigate } from 'react-router-dom';
+
 import HeroThumb from '@/assets/images/hero/hero.png';
 import Button from './Button';
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/admin-register');
+  };
+
   return (
     <section className='flex flex-col items-center justify-center text-center min-h-screen'>
       <div className='flex flex-col items-center justify-center text-center gap-5 lg:py-12'>
@@ -15,7 +23,9 @@ const Hero = () => {
           </p>
         </div>
 
-        <Button className='btn btn-primary'>Admin Register</Button>
+        <Button onClick={handleClick} className='btn btn-primary'>
+          Admin Register
+        </Button>
       </div>
 
       <figure>
