@@ -1,6 +1,11 @@
-const Form = ({ action, method, className }) => {
+const Form = ({ onSubmit, action, method, className }) => {
   return (
-    <form action={action} method={method} className={className}>
+    <form
+      onSubmit={onSubmit}
+      action={action}
+      method={method}
+      className={className}
+    >
       {children}
     </form>
   );
