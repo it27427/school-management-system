@@ -5,6 +5,7 @@ import HomePage from '@/pages/HomePage';
 
 /* AUTHENTICATIONS */
 import AdminLogin from '@/pages/Auth/AdminLogin';
+import AdminRegister from '@/pages/Auth/AdminRegister';
 import StudentLogin from '@/pages/Auth/StudentLogin';
 import TeacherLogin from '@/pages/Auth/TeacherLogin';
 
@@ -20,6 +21,7 @@ const App = () => {
 
         {/* AUTHENTICATION-PAGES */}
         <Route path='/admin-login' element={<AdminLogin />} />
+        <Route path='/admin-register' element={<AdminRegister />} />
         <Route path='/student-login' element={<StudentLogin />} />
         <Route path='/teacher-login' element={<TeacherLogin />} />
 
