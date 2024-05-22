@@ -14,6 +14,25 @@ import AdminDashboard from '@/pages/Admin/Dashboard';
 import StudentDashboard from '@/pages/Students/Dashboard';
 import TeacherDashboard from '@/pages/Teachers/Dashboard';
 
+/* ADMIN */
+import Announcement from '@/pages/Admin/Announcement';
+import Assignment from '@/pages/Admin/Assignment';
+import Attendance from '@/pages/Admin/Attendance';
+import Classes from '@/pages/Admin/Classes';
+import EventCalendar from '@/pages/Admin/EventCalendar';
+import Exam from '@/pages/Admin/Exam';
+import Library from '@/pages/Admin/Library';
+import Performance from '@/pages/Admin/Performance';
+import SettingsProfile from '@/pages/Admin/SettingsProfile';
+import Students from '@/pages/Admin/Students';
+import Teachers from '@/pages/Admin/Teachers';
+
+/* STUDENT */
+// import StudentDashboard from '@/pages/Students/Dashboard';
+
+/* TEACHER */
+// import TeacherDashboard from '@/pages/Teachers/Dashboard';
+
 /* NOT-FOUND */
 import ErrorPage from '@/pages/ErrorPage';
 
@@ -34,6 +53,25 @@ const App = () => {
         <Route path='/admin/dashboard' element={<AdminDashboard />} />
         <Route path='/student/dashboard' element={<StudentDashboard />} />
         <Route path='/teacher/dashboard' element={<TeacherDashboard />} />
+
+        {/* ADMIN */}
+        <Route path='/admin/announcement' element={<Announcement />} />
+        <Route path='/admin/assignment' element={<Assignment />} />
+        <Route path='/admin/attendance' element={<Attendance />} />
+        <Route path='/admin/classes' element={<Classes />} />
+        <Route path='/admin/events' element={<EventCalendar />} />
+        <Route path='/admin/exam' element={<Exam />} />
+        <Route path='/admin/library' element={<Library />} />
+        <Route path='/admin/performance' element={<Performance />} />
+        <Route path='/admin/settings' element={<SettingsProfile />} />
+        <Route path='/admin/students' element={<Students />} />
+        <Route path='/admin/teachers' element={<Teachers />} />
+
+        {/* STUDENT */}
+        {/* <Route path='/student/' element={< />} /> */}
+
+        {/* TEACHER */}
+        {/* <Route path='/teacher/' element={< />} /> */}
 
         {/* NOT-FOUND */}
         <Route path='/*' element={<ErrorPage />} />
