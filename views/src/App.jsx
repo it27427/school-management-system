@@ -55,6 +55,8 @@ const App = () => {
     <Router>
       <Routes>
         <Route path='/' element={<HomePage />} />
+
+        {/* CHOOSE-USER */}
         <Route path='/choose-user' element={<ChooseUser />} />
 
         {/* AUTHENTICATIONS */}
