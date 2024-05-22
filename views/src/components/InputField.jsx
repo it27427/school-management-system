@@ -1,10 +1,14 @@
-import React from 'react';
-
-const InputField = () => {
+const InputField = ({ type, id, name, className, onChange }) => {
   return (
-    <div>
-      <h1>Input Field</h1>
-    </div>
+    <input
+      type={type}
+      id={id}
+      name={name}
+      className={className}
+      autoComplete='off'
+      onChange={onChange}
+      required
+    />
   );
 };
 
