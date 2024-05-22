@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Assignment = () => {
+const AdminAssignment = () => {
   return (
     <div>
       <h1>Admin Assignment Page</h1>
@@ -8,4 +8,4 @@ const Assignment = () => {
   );
 };
 
-export default Assignment;
+export default AdminAssignment;
