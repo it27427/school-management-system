@@ -1,4 +1,12 @@
-const InputField = ({ type, id, name, className, onChange }) => {
+const InputField = ({
+  type,
+  id,
+  name,
+  className,
+  onChange,
+  placeholder,
+  value,
+}) => {
   return (
     <input
       type={type}
@@ -7,6 +15,8 @@ const InputField = ({ type, id, name, className, onChange }) => {
       className={className}
       autoComplete='off'
       onChange={onChange}
+      placeholder={placeholder}
+      value={value}
       required
     />
   );
