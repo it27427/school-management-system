@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Button from '@/components/Button';
 import Form from '@/components/Form';
@@ -7,16 +8,17 @@ import InputField from '@/components/InputField';
 const AdminLoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    navigate('/admin/dashboard');
     console.log('User login', email, password);
   };
 
   return (
     <Form
       onSubmit={handleSubmit}
-      action='/admin/dashboard'
       method='POST'
       className='flex flex-col gap-6 bg-slate-100 p-4 rounded-lg w-80 md:w-96 mx-auto md:p-6'
     >
@@ -72,7 +74,7 @@ const AdminLoginForm = () => {
         type='submit'
         className='btn btn-info text-md uppercase font-bold'
       >
-        Login Admin
+        Login
       </Button>
     </Form>
   );
