@@ -2,8 +2,8 @@ import React from 'react';
 
 const AdminRegister = () => {
   return (
-    <div>
-      <h1>Admin Register Page</h1>
+    <div className='flex flex-col gap-6'>
+      <h2 className='text-2xl'>Admin Register</h2>
     </div>
   );
 };
