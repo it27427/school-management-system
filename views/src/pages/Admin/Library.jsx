@@ -3,7 +3,7 @@ import React from 'react';
 const Library = () => {
   return (
     <div>
-      <h1>Library Page</h1>
+      <h1>Admin Library Page</h1>
     </div>
   );
 };

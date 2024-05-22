@@ -3,7 +3,7 @@ import React from 'react';
 const EventCalendar = () => {
   return (
     <div>
-      <h1>Event Calendar</h1>
+      <h1>Admin Event Calendar</h1>
     </div>
   );
 };
