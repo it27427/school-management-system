@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Button from './Button';
+import Form from './Form';
 import InputField from './InputField';
 
 const RegisterForm = () => {
@@ -14,7 +15,7 @@ const RegisterForm = () => {
   };
 
   return (
-    <form
+    <Form
       onSubmit={handleSubmit}
       className='flex flex-col gap-6 bg-slate-100 p-4 rounded-lg w-80 md:w-96 mx-auto md:p-6'
     >
@@ -115,7 +116,7 @@ const RegisterForm = () => {
       >
         Register
       </Button>
-    </form>
+    </Form>
   );
 };
 
