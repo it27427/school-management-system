@@ -28,7 +28,12 @@ import Students from '@/pages/Admin/Students';
 import Teachers from '@/pages/Admin/Teachers';
 
 /* STUDENT */
-// import StudentDashboard from '@/pages/Students/Dashboard';
+import StudentAnnouncement from '@/pages/Students/Announcement';
+import StudentAssignment from '@/pages/Students/Assignment';
+import StudentAttendance from '@/pages/Students/Attendance';
+import StudentExam from '@/pages/Students/Exam';
+import StudentPerformance from '@/pages/Students/Performance';
+import StudentProfile from '@/pages/Students/Profile';
 
 /* TEACHER */
 // import TeacherDashboard from '@/pages/Teachers/Dashboard';
@@ -68,7 +73,12 @@ const App = () => {
         <Route path='/admin/teachers' element={<Teachers />} />
 
         {/* STUDENT */}
-        {/* <Route path='/student/' element={< />} /> */}
+        <Route path='/student/announcement' element={<StudentAnnouncement />} />
+        <Route path='/student/assignment' element={<StudentAssignment />} />
+        <Route path='/student/attendance' element={<StudentAttendance />} />
+        <Route path='/student/exam' element={<StudentExam />} />
+        <Route path='/student/performance' element={<StudentPerformance />} />
+        <Route path='/student/profile' element={<StudentProfile />} />
 
         {/* TEACHER */}
         {/* <Route path='/teacher/' element={< />} /> */}
