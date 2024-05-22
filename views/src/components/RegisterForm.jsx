@@ -16,7 +16,7 @@ const RegisterForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className='flex flex-col gap-6 w-80 md:w-96 mx-auto'
+      className='flex flex-col gap-6 bg-slate-100 p-4 rounded-lg w-80 md:w-96 mx-auto md:p-6'
     >
       <div className='flex flex-col gap-5'>
         <label className='input input-bordered flex items-center gap-2'>
@@ -111,7 +111,7 @@ const RegisterForm = () => {
 
       <Button
         type='submit'
-        className='btn btn-primary text-md uppercase font-bold'
+        className='btn btn-info text-md uppercase font-bold'
       >
         Register
       </Button>
