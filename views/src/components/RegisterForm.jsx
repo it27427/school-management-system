@@ -9,6 +9,7 @@ const RegisterForm = () => {
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     console.log('User registered', userName, email, phoneNumber, password);
   };
 
