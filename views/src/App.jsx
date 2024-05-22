@@ -36,7 +36,16 @@ import StudentPerformance from '@/pages/Students/Performance';
 import StudentProfile from '@/pages/Students/Profile';
 
 /* TEACHER */
-// import TeacherDashboard from '@/pages/Teachers/Dashboard';
+import TeacherAnnouncement from '@/pages/Teachers/Announcement';
+import TeacherAssignment from '@/pages/Teachers/Assignment';
+import TeacherAttendance from '@/pages/Teachers/Attendance';
+import TeacherClasses from '@/pages/Teachers/Classes';
+import TeacherEvents from '@/pages/Teachers/Events';
+import TeacherExam from '@/pages/Teachers/Exam';
+import TeacherPerformance from '@/pages/Teachers/Performance';
+import TeacherProfile from '@/pages/Teachers/Profile';
+import TeacherStudents from '@/pages/Teachers/Students';
+import TeacherTeachers from '@/pages/Teachers/Teachers';
 
 /* NOT-FOUND */
 import ErrorPage from '@/pages/ErrorPage';
@@ -81,7 +90,16 @@ const App = () => {
         <Route path='/student/profile' element={<StudentProfile />} />
 
         {/* TEACHER */}
-        {/* <Route path='/teacher/' element={< />} /> */}
+        <Route path='/teacher/announcement' element={<TeacherAnnouncement />} />
+        <Route path='/teacher/assignment' element={<TeacherAssignment />} />
+        <Route path='/teacher/attendance' element={<TeacherAttendance />} />
+        <Route path='/teacher/classes' element={<TeacherClasses />} />
+        <Route path='/teacher/events' element={<TeacherEvents />} />
+        <Route path='/teacher/exam' element={<TeacherExam />} />
+        <Route path='/teacher/performance' element={<TeacherPerformance />} />
+        <Route path='/teacher/profile' element={<TeacherProfile />} />
+        <Route path='/teacher/students' element={<TeacherStudents />} />
+        <Route path='/teacher/teachers' element={<TeacherTeachers />} />
 
         {/* NOT-FOUND */}
         <Route path='/*' element={<ErrorPage />} />
