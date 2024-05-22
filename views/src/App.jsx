@@ -9,6 +9,11 @@ import AdminRegister from '@/pages/Auth/AdminRegister';
 import StudentLogin from '@/pages/Auth/StudentLogin';
 import TeacherLogin from '@/pages/Auth/TeacherLogin';
 
+/* DASHBOARDS */
+import AdminDashboard from '@/pages/Admin/Dashboard';
+import StudentDashboard from '@/pages/Students/Dashboard';
+import TeacherDashboard from '@/pages/Teachers/Dashboard';
+
 /* NOT-FOUND */
 import ErrorPage from '@/pages/ErrorPage';
 
@@ -19,11 +24,16 @@ const App = () => {
         <Route path='/' element={<HomePage />} />
         <Route path='/choose-user' element={<ChooseUser />} />
 
-        {/* AUTHENTICATION-PAGES */}
+        {/* AUTHENTICATIONS */}
         <Route path='/admin-login' element={<AdminLogin />} />
         <Route path='/admin-register' element={<AdminRegister />} />
         <Route path='/student-login' element={<StudentLogin />} />
         <Route path='/teacher-login' element={<TeacherLogin />} />
+
+        {/* DASHBOARDS */}
+        <Route path='/admin/dashboard' element={<AdminDashboard />} />
+        <Route path='/student/dashboard' element={<StudentDashboard />} />
+        <Route path='/teacher/dashboard' element={<TeacherDashboard />} />
 
         {/* NOT-FOUND */}
         <Route path='/*' element={<ErrorPage />} />
