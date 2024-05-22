@@ -16,6 +16,7 @@ const AdminLoginForm = () => {
   return (
     <Form
       onSubmit={handleSubmit}
+      action='/admin/dashboard'
       className='flex flex-col gap-6 bg-slate-100 p-4 rounded-lg w-80 md:w-96 mx-auto md:p-6'
     >
       <div className='flex flex-col gap-5'>
