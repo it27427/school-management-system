@@ -17,7 +17,7 @@ import TeacherDashboard from '@/pages/Teachers/Dashboard';
 /* ADMIN */
 import AdminAnnouncement from '@/pages/Admin/Announcement';
 import AdminAssignment from '@/pages/Admin/Assignment';
-import Attendance from '@/pages/Admin/Attendance';
+import AdminAttendance from '@/pages/Admin/Attendance';
 import Classes from '@/pages/Admin/Classes';
 import EventCalendar from '@/pages/Admin/EventCalendar';
 import Exam from '@/pages/Admin/Exam';
@@ -73,7 +73,7 @@ const App = () => {
         {/* ADMIN */}
         <Route path='/admin/announcement' element={<AdminAnnouncement />} />
         <Route path='/admin/assignment' element={<AdminAssignment />} />
-        <Route path='/admin/attendance' element={<Attendance />} />
+        <Route path='/admin/attendance' element={<AdminAttendance />} />
         <Route path='/admin/classes' element={<Classes />} />
         <Route path='/admin/events' element={<EventCalendar />} />
         <Route path='/admin/exam' element={<Exam />} />

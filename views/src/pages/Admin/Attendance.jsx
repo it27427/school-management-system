@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Attendance = () => {
+const AdminAttendance = () => {
   return (
     <div>
       <h1>Admin Attendance</h1>
@@ -8,4 +8,4 @@ const Attendance = () => {
   );
 };
 
-export default Attendance;
+export default AdminAttendance;
