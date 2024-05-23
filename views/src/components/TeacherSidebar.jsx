@@ -1,10 +1,23 @@
-import React from 'react';
+import Logo from '@/assets/images/logo/logo.webp';
+import { Link } from 'react-router-dom';
+import TeacherList from './TeacherList';
 
 const TeacherSidebar = () => {
   return (
-    <div>
-      <h1>TeacherSidebar Component</h1>
-    </div>
+    <aside className='sticky top-0 z-50 min-h-screen bg-sky-950'>
+      <header className='w-full h-16 flex items-center justify-center sticky top-0 bg-sky-950 mb-2'>
+        <Link
+          to='/teacher/dashboard'
+          className='flex items-center justify-center w-28 h-14'
+        >
+          <img src={Logo} alt='BRAND-LOGO' className='w-full h-full' />
+        </Link>
+      </header>
+
+      <div className='overflow-y-auto max-h-[calc(100% - 4rem)]'>
+        <TeacherList />
+      </div>
+    </aside>
   );
 };
 
