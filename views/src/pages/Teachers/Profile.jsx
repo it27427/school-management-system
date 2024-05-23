@@ -1,10 +1,10 @@
-import DashboardLayout from '@/layouts/DashboardLayout';
+import TeacherLayout from '@/layouts/TeacherLayout';
 
 const Profile = () => {
   return (
-    <DashboardLayout>
+    <TeacherLayout>
       <h1>Teachers Profile Page</h1>
-    </DashboardLayout>
+    </TeacherLayout>
   );
 };
 

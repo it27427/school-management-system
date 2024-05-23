@@ -1,10 +1,10 @@
-import DashboardLayout from '@/layouts/DashboardLayout';
+import TeacherLayout from '@/layouts/TeacherLayout';
 
 const Performance = () => {
   return (
-    <DashboardLayout>
+    <TeacherLayout>
       <h1>Teachers Performance Page</h1>
-    </DashboardLayout>
+    </TeacherLayout>
   );
 };
 
