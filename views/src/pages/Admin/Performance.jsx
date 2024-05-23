@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Performance = () => {
+const AdminPerformance = () => {
   return (
     <div>
       <h1>Admin Performance Page</h1>
@@ -8,4 +8,4 @@ const Performance = () => {
   );
 };
 
-export default Performance;
+export default AdminPerformance;
