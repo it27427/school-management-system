@@ -1,10 +1,10 @@
-import React from 'react';
+import RootLayout from '@/layouts/RootLayout';
 
 const AdminClasses = () => {
   return (
-    <div>
+    <RootLayout>
       <h1>Admin Classes Page</h1>
-    </div>
+    </RootLayout>
   );
 };
 
