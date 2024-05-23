@@ -1,10 +1,10 @@
-import React from 'react';
+import RootLayout from '@/layouts/RootLayout';
 
 const AdminAnnouncement = () => {
   return (
-    <div>
+    <RootLayout>
       <h1>Admin Announcement Page</h1>
-    </div>
+    </RootLayout>
   );
 };
 
