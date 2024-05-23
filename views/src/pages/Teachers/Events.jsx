@@ -1,10 +1,10 @@
-import React from 'react';
+import RootLayout from '@/layouts/RootLayout';
 
 const Events = () => {
   return (
-    <div>
+    <RootLayout>
       <h1>Teachers Events Page</h1>
-    </div>
+    </RootLayout>
   );
 };
 
