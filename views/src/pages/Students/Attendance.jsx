@@ -1,10 +1,10 @@
-import DashboardLayout from '@/layouts/DashboardLayout';
+import StudentLayout from '@/layouts/StudentLayout';
 
 const Attendance = () => {
   return (
-    <DashboardLayout>
+    <StudentLayout>
       <h1>Students Attendance Page</h1>
-    </DashboardLayout>
+    </StudentLayout>
   );
 };
 
