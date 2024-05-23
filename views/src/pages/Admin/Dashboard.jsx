@@ -1,10 +1,15 @@
-import RootLayout from '@/layouts/RootLayout';
+import DashboardLayout from '@/layouts/DashboardLayout';
+import Announcement from '@/pages/Admin/Announcement';
+import EventCalendar from '@/pages/Admin/EventCalendar';
+import Performance from '@/pages/Admin/Performance';
 
 const Dashboard = () => {
   return (
-    <RootLayout>
-      <h1>Admin Dashboard Page</h1>
-    </RootLayout>
+    <DashboardLayout>
+      <EventCalendar />
+      <Announcement />
+      <Performance />
+    </DashboardLayout>
   );
 };
 
