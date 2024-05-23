@@ -1,10 +1,10 @@
-import React from 'react';
+import RootLayout from '@/layouts/RootLayout';
 
 const Profile = () => {
   return (
-    <div>
+    <RootLayout>
       <h1>Students Profile Page</h1>
-    </div>
+    </RootLayout>
   );
 };
 
