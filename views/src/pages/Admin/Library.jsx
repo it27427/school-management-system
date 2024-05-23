@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Library = () => {
+const AdminLibrary = () => {
   return (
     <div>
       <h1>Admin Library Page</h1>
@@ -8,4 +8,4 @@ const Library = () => {
   );
 };
 
-export default Library;
+export default AdminLibrary;

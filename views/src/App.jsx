@@ -21,7 +21,7 @@ import AdminAttendance from '@/pages/Admin/Attendance';
 import AdminClasses from '@/pages/Admin/Classes';
 import AdminEventCalendar from '@/pages/Admin/EventCalendar';
 import AdminExam from '@/pages/Admin/Exam';
-import Library from '@/pages/Admin/Library';
+import AdminLibrary from '@/pages/Admin/Library';
 import Performance from '@/pages/Admin/Performance';
 import SettingsProfile from '@/pages/Admin/SettingsProfile';
 import Students from '@/pages/Admin/Students';
@@ -77,7 +77,7 @@ const App = () => {
         <Route path='/admin/classes' element={<AdminClasses />} />
         <Route path='/admin/events' element={<AdminEventCalendar />} />
         <Route path='/admin/exam' element={<AdminExam />} />
-        <Route path='/admin/library' element={<Library />} />
+        <Route path='/admin/library' element={<AdminLibrary />} />
         <Route path='/admin/performance' element={<Performance />} />
         <Route path='/admin/settings' element={<SettingsProfile />} />
         <Route path='/admin/students' element={<Students />} />
