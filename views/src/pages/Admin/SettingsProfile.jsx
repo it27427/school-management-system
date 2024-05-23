@@ -1,10 +1,10 @@
-import RootLayout from '@/layouts/RootLayout';
+import DashboardLayout from '@/layouts/DashboardLayout';
 
 const SettingsProfile = () => {
   return (
-    <RootLayout>
+    <DashboardLayout>
       <h1>Admin Settings Profile Page</h1>
-    </RootLayout>
+    </DashboardLayout>
   );
 };
 

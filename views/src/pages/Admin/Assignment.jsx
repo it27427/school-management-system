@@ -1,10 +1,10 @@
-import RootLayout from '@/layouts/RootLayout';
+import DashboardLayout from '@/layouts/DashboardLayout';
 
 const AdminAssignment = () => {
   return (
-    <RootLayout>
+    <DashboardLayout>
       <h1>Admin Assignment Page</h1>
-    </RootLayout>
+    </DashboardLayout>
   );
 };
 
