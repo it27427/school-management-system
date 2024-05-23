@@ -8,7 +8,7 @@ const AdminLayout = ({ children }) => {
       </div>
 
       <div className='w-full lg:w-5/6'>
-        <main>{children}</main>
+        <main className='p-4'>{children}</main>
       </div>
     </div>
   );

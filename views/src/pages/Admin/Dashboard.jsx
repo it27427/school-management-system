@@ -1,14 +1,26 @@
 import AdminLayout from '@/layouts/AdminLayout';
-import Announcement from '@/pages/Admin/Announcement';
-import EventCalendar from '@/pages/Admin/EventCalendar';
-import Performance from '@/pages/Admin/Performance';
+
+import CountCard from '@/components/CountCard';
 
 const Dashboard = () => {
   return (
     <AdminLayout>
-      <EventCalendar />
-      <Announcement />
-      <Performance />
+      <div className='grid md:grid-cols-3 gap-4'>
+        <CountCard>
+          <h2 className='card-title'>Total Classes</h2>
+          <p>10</p>
+        </CountCard>
+
+        <CountCard>
+          <h2 className='card-title'>Total Teachers</h2>
+          <p>20</p>
+        </CountCard>
+
+        <CountCard>
+          <h2 className='card-title'>Total Students</h2>
+          <p>200</p>
+        </CountCard>
+      </div>
     </AdminLayout>
   );
 };
