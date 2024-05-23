@@ -1,10 +1,10 @@
-import RootLayout from '@/layouts/RootLayout';
+import DashboardLayout from '@/layouts/DashboardLayout';
 
 const Performance = () => {
   return (
-    <RootLayout>
+    <DashboardLayout>
       <h1>Students Performance Page</h1>
-    </RootLayout>
+    </DashboardLayout>
   );
 };
 
