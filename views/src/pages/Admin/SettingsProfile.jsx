@@ -1,10 +1,10 @@
-import React from 'react';
+import RootLayout from '@/layouts/RootLayout';
 
 const SettingsProfile = () => {
   return (
-    <div>
+    <RootLayout>
       <h1>Admin Settings Profile Page</h1>
-    </div>
+    </RootLayout>
   );
 };
 
