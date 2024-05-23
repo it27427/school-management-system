@@ -1,10 +1,10 @@
-import DashboardLayout from '@/layouts/DashboardLayout';
+import AdminLayout from '@/layouts/AdminLayout';
 
 const Teachers = () => {
   return (
-    <DashboardLayout>
+    <AdminLayout>
       <h1>Admin Teachers Page</h1>
-    </DashboardLayout>
+    </AdminLayout>
   );
 };
 

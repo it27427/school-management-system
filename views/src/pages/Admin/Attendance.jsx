@@ -1,10 +1,10 @@
-import RootLayout from '@/layouts/RootLayout';
+import AdminLayout from '@/layouts/AdminLayout';
 
 const AdminAttendance = () => {
   return (
-    <RootLayout>
+    <AdminLayout>
       <h1>Admin Attendance</h1>
-    </RootLayout>
+    </AdminLayout>
   );
 };
 
