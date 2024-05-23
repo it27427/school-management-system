@@ -1,10 +1,10 @@
-import React from 'react';
+import RootLayout from '@/layouts/RootLayout';
 
 const AdminEventCalendar = () => {
   return (
-    <div>
+    <RootLayout>
       <h1>Admin Event Calendar</h1>
-    </div>
+    </RootLayout>
   );
 };
 
