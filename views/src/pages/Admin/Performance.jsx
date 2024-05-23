@@ -1,10 +1,10 @@
-import React from 'react';
+import RootLayout from '@/layouts/RootLayout';
 
 const AdminPerformance = () => {
   return (
-    <div>
+    <RootLayout>
       <h1>Admin Performance Page</h1>
-    </div>
+    </RootLayout>
   );
 };
 
