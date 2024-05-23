@@ -1,6 +1,6 @@
 import TeacherSidebar from '@/components/TeacherSidebar';
 
-const AdminLayout = ({ children }) => {
+const TeacherLayout = ({ children }) => {
   return (
     <div className='flex items-start'>
       <div className='w-1/6 hidden lg:block'>
@@ -14,4 +14,4 @@ const AdminLayout = ({ children }) => {
   );
 };
 
-export default AdminLayout;
+export default TeacherLayout;
