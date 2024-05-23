@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Classes = () => {
+const AdminClasses = () => {
   return (
     <div>
       <h1>Admin Classes Page</h1>
@@ -8,4 +8,4 @@ const Classes = () => {
   );
 };
 
-export default Classes;
+export default AdminClasses;
