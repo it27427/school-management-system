@@ -49,11 +49,6 @@ const TeacherList = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink to='/teacher/library' className={linkclassNames}>
-          <i className='ri-building-4-line'></i> Library
-        </NavLink>
-      </li>
-      <li>
         <NavLink to='/teacher/announcement' className={linkclassNames}>
           <i className='ri-megaphone-line'></i> Announcement
         </NavLink>
@@ -64,8 +59,8 @@ const TeacherList = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink to='/teacher/settings' className={linkclassNames}>
-          <i className='ri-settings-2-line'></i> Settings and Profile
+        <NavLink to='/teacher/profile' className={linkclassNames}>
+          <i className='ri-user-3-line'></i> Profile
         </NavLink>
       </li>
     </ul>
