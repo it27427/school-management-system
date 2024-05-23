@@ -1,8 +1,10 @@
+import RootLayout from '@/layouts/RootLayout';
+
 const ContactPage = () => {
   return (
-    <div>
+    <RootLayout>
       <h1>Contact Page</h1>
-    </div>
+    </RootLayout>
   );
 };
 
