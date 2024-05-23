@@ -1,10 +1,10 @@
-import React from 'react';
+import RootLayout from '@/layouts/RootLayout';
 
 const Attendance = () => {
   return (
-    <div>
+    <RootLayout>
       <h1>Teachers Attendance Page</h1>
-    </div>
+    </RootLayout>
   );
 };
 
