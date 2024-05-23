@@ -1,10 +1,10 @@
-import React from 'react';
+import RootLayout from '@/layouts/RootLayout';
 
 const AdminLibrary = () => {
   return (
-    <div>
+    <RootLayout>
       <h1>Admin Library Page</h1>
-    </div>
+    </RootLayout>
   );
 };
 
