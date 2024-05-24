@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-const AdminList = () => {
+const AdminList = ({ isOpen }) => {
   const linkclassNames = ({ isActive }) =>
     isActive
       ? 'py-2 px-3 inline-block w-full bg-sky-700 text-white text-sm'
@@ -10,7 +10,12 @@ const AdminList = () => {
     <ul className='flex flex-col gap-0.5'>
       <li>
         <NavLink to='/admin/dashboard' className={linkclassNames}>
-          <i className='ri-dashboard-line'></i> Dashboard
+          <i
+            className={
+              !isOpen ? 'ri-dashboard-line text-xl' : 'ri-dashboard-line'
+            }
+          ></i>
+          {isOpen && 'Dashboard'}
         </NavLink>
       </li>
       <li>

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import Icon from '@/assets/images/logo/icon.png';
@@ -6,11 +5,15 @@ import Logo from '@/assets/images/logo/logo.webp';
 import Button from '@/components/Button';
 import AdminList from './AdminList';
 
-const AdminSidebar = ({ test }) => {
-  const [isOpen, setIsOpen] = useState(true);
-
+const AdminSidebar = ({ toggleSidebar, isOpen }) => {
   return (
-    <aside className='sticky top-0 z-50 min-h-screen bg-sky-950'>
+    <aside
+      className={
+        isOpen
+          ? 'sticky top-0 z-50 min-h-screen bg-sky-950 hidden lg:block w-[13.125rem]'
+          : 'sticky top-0 z-50 min-h-screen bg-sky-950 hidden lg:block w-20'
+      }
+    >
       <header className='w-full h-16 flex items-center justify-center sticky top-0 bg-sky-950 mb-2'>
         {isOpen ? (
           <Link
@@ -28,11 +31,13 @@ const AdminSidebar = ({ test }) => {
           </Link>
         )}
 
-        <Button onClick={test}>Test</Button>
+        <Button onClick={toggleSidebar} className='text-white'>
+          Test
+        </Button>
       </header>
 
-      <div className='overflow-y-auto max-h-[calc(100% - 4rem)]'>
-        <AdminList />
+      <div className='overflow-x-hidden overflow-y-auto max-h-[calc(100% - 4rem)]'>
+        <AdminList isOpen={isOpen} />
       </div>
     </aside>
   );
