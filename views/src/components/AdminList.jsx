@@ -12,7 +12,7 @@ const AdminList = ({ isOpen }) => {
         <NavLink to='/admin/dashboard' className={linkclassNames}>
           <i
             className={
-              !isOpen ? 'ri-dashboard-line text-xl' : 'ri-dashboard-line'
+              !isOpen ? 'ri-dashboard-line text-lg' : 'ri-dashboard-line'
             }
           ></i>
           {isOpen && ' Dashboard'}
@@ -22,7 +22,7 @@ const AdminList = ({ isOpen }) => {
       <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/admin/classes' className={linkclassNames}>
           <i
-            className={!isOpen ? 'ri-school-line text-xl' : 'ri-school-line'}
+            className={!isOpen ? 'ri-school-line text-lg' : 'ri-school-line'}
           ></i>
           {isOpen && ' Classes'}
         </NavLink>
@@ -30,7 +30,7 @@ const AdminList = ({ isOpen }) => {
 
       <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/admin/students' className={linkclassNames}>
-          <i className={!isOpen ? 'ri-team-line text-xl' : 'ri-team-line'}></i>
+          <i className={!isOpen ? 'ri-team-line text-lg' : 'ri-team-line'}></i>
           {isOpen && ' Students'}
         </NavLink>
       </li>
@@ -38,7 +38,7 @@ const AdminList = ({ isOpen }) => {
       <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/admin/teachers' className={linkclassNames}>
           <i
-            className={!isOpen ? 'ri-group-line text-xl' : 'ri-group-line'}
+            className={!isOpen ? 'ri-group-line text-lg' : 'ri-group-line'}
           ></i>
           {isOpen && ' Teachers'}
         </NavLink>
@@ -48,7 +48,7 @@ const AdminList = ({ isOpen }) => {
         <NavLink to='/admin/assignment' className={linkclassNames}>
           <i
             className={
-              !isOpen ? 'ri-attachment-line text-xl' : 'ri-attachment-line'
+              !isOpen ? 'ri-attachment-line text-lg' : 'ri-attachment-line'
             }
           ></i>
           {isOpen && ' Assignments'}
@@ -58,7 +58,7 @@ const AdminList = ({ isOpen }) => {
       <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/admin/exam' className={linkclassNames}>
           <i
-            className={!isOpen ? 'ri-draft-line text-xl' : 'ri-draft-line'}
+            className={!isOpen ? 'ri-draft-line text-lg' : 'ri-draft-line'}
           ></i>
           {isOpen && ' Exam'}
         </NavLink>
@@ -68,7 +68,7 @@ const AdminList = ({ isOpen }) => {
         <NavLink to='/admin/performance' className={linkclassNames}>
           <i
             className={
-              !isOpen ? 'ri-line-chart-line text-xl' : 'ri-line-chart-line'
+              !isOpen ? 'ri-line-chart-line text-lg' : 'ri-line-chart-line'
             }
           ></i>
           {isOpen && ' Performance'}
@@ -79,7 +79,7 @@ const AdminList = ({ isOpen }) => {
         <NavLink to='/admin/attendance' className={linkclassNames}>
           <i
             className={
-              !isOpen ? 'ri-calendar-line text-xl' : 'ri-calendar-line'
+              !isOpen ? 'ri-calendar-line text-lg' : 'ri-calendar-line'
             }
           ></i>
           {isOpen && ' Attendance'}
@@ -90,7 +90,7 @@ const AdminList = ({ isOpen }) => {
         <NavLink to='/admin/library' className={linkclassNames}>
           <i
             className={
-              !isOpen ? 'ri-building-4-line text-xl' : 'ri-building-4-line'
+              !isOpen ? 'ri-building-4-line text-lg' : 'ri-building-4-line'
             }
           ></i>
           {isOpen && ' Library'}
@@ -101,7 +101,7 @@ const AdminList = ({ isOpen }) => {
         <NavLink to='/admin/announcement' className={linkclassNames}>
           <i
             className={
-              !isOpen ? 'ri-megaphone-line text-xl' : 'ri-megaphone-line'
+              !isOpen ? 'ri-megaphone-line text-lg' : 'ri-megaphone-line'
             }
           ></i>
           {isOpen && ' Announcement'}
@@ -113,7 +113,7 @@ const AdminList = ({ isOpen }) => {
           <i
             className={
               !isOpen
-                ? 'ri-calendar-event-line text-xl'
+                ? 'ri-calendar-event-line text-lg'
                 : 'ri-calendar-event-line'
             }
           ></i>
@@ -125,7 +125,7 @@ const AdminList = ({ isOpen }) => {
         <NavLink to='/admin/settings' className={linkclassNames}>
           <i
             className={
-              !isOpen ? 'ri-settings-2-line text-xl' : 'ri-settings-2-line'
+              !isOpen ? 'ri-settings-2-line text-lg' : 'ri-settings-2-line'
             }
           ></i>
           {isOpen && ' Settings and Profile'}
