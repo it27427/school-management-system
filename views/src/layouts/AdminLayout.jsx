@@ -1,14 +1,27 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+import Icon from '@/assets/images/logo/icon.png';
+import Logo from '@/assets/images/logo/logo.webp';
 import AdminList from '@/components/AdminList';
 import Button from '@/components/Button';
 
 const AdminLayout = ({ children }) => {
-  const test = () => {
-    console.log('test');
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
     <div className='flex items-start'>
-      <aside className='sticky top-0 z-50 min-h-screen bg-sky-950 hidden lg:block'>
+      <aside
+        className={
+          isOpen
+            ? 'sticky top-0 z-50 min-h-screen bg-sky-950 hidden lg:block w-[13.125rem]'
+            : 'sticky top-0 z-50 min-h-screen bg-sky-950 hidden lg:block w-20'
+        }
+      >
         <header className='w-full h-16 flex items-center justify-center sticky top-0 bg-sky-950 mb-2'>
           {isOpen ? (
             <Link
@@ -26,7 +39,7 @@ const AdminLayout = ({ children }) => {
             </Link>
           )}
 
-          <Button onClick={test}>Test</Button>
+          <Button onClick={toggleSidebar}>Test</Button>
         </header>
 
         <div className='overflow-y-auto max-h-[calc(100% - 4rem)]'>
@@ -34,7 +47,13 @@ const AdminLayout = ({ children }) => {
         </div>
       </aside>
 
-      <div className='w-full lg:w-5/6'>
+      <div
+        className={
+          isOpen
+            ? 'w-full lg:w-[calc(100%-13.125rem)]'
+            : 'w-full lg:w-[calc(100%-5rem)]'
+        }
+      >
         <main className='p-4'>{children}</main>
       </div>
     </div>
