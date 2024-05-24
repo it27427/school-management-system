@@ -16,8 +16,8 @@ const AdminLayout = ({ children }) => {
       <div
         className={
           isOpen
-            ? 'w-full lg:w-[calc(100%-13.125rem)]'
-            : 'w-full lg:w-[calc(100%-5rem)]'
+            ? 'w-full lg:w-[calc(100%-15rem)]'
+            : 'w-full lg:w-[calc(100%-6rem)]'
         }
       >
         <main className='p-4'>{children}</main>

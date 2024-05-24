@@ -10,8 +10,8 @@ const AdminSidebar = ({ toggleSidebar, isOpen }) => {
     <aside
       className={
         isOpen
-          ? 'sticky top-0 z-50 min-h-screen bg-sky-950 hidden lg:block w-[13.125rem]'
-          : 'sticky top-0 z-50 min-h-screen bg-sky-950 hidden lg:block w-20'
+          ? 'sticky top-0 z-50 min-h-screen bg-sky-950 hidden lg:block w-[15rem]'
+          : 'sticky top-0 z-50 min-h-screen bg-sky-950 hidden lg:block w-24'
       }
     >
       <header className='w-full h-16 flex items-center justify-center sticky top-0 bg-sky-950 mb-2'>
@@ -25,14 +25,21 @@ const AdminSidebar = ({ toggleSidebar, isOpen }) => {
         ) : (
           <Link
             to='/admin/dashboard'
-            className='flex items-center justify-center w-12 h-12'
+            className='flex items-center justify-center w-10 h-10'
           >
             <img src={Icon} alt='BRAND-ICON' className='w-full h-full' />
           </Link>
         )}
 
-        <Button onClick={toggleSidebar} className='text-white'>
-          Test
+        <Button
+          onClick={toggleSidebar}
+          className={
+            isOpen
+              ? 'absolute top-1/2 -translate-y-1/2 right-0 z-50 transition rotate-0'
+              : 'absolute top-1/2 -translate-y-1/2 right-0 z-50 transition rotate-180'
+          }
+        >
+          <i className='ri-arrow-left-circle-line text-sky-400 text-2xl'></i>
         </Button>
       </header>
 
