@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import AdminSidebar from '../components/AdminSidebar';
+import AdminSidebar from '@/components/AdminSidebar';
 
 const AdminLayout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(true);
