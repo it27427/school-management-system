@@ -1,7 +1,8 @@
 import { useState } from 'react';
 
+import AddAssignment from '@/components/AddAssignment';
+import AssignmentList from '@/components/AssignmentList';
 import AdminLayout from '@/layouts/AdminLayout';
-import AddAssignment from '../../components/AddAssignment';
 
 const AdminAssignment = () => {
   const [assignmentTitle, setAssignmentTitle] = useState('');
@@ -33,7 +34,7 @@ const AdminAssignment = () => {
           />
         </div>
 
-        {/* <AssignmentList /> */}
+        <AssignmentList />
       </div>
     </AdminLayout>
   );
