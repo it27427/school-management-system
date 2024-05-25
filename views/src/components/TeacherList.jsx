@@ -10,67 +10,120 @@ const TeacherList = () => {
     <ul className='flex flex-col gap-0.5'>
       <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/dashboard' className={linkclassNames}>
-          <i className='ri-dashboard-line'></i> Dashboard
+          <i
+            className={
+              !isOpen ? 'ri-dashboard-line text-lg' : 'ri-dashboard-line'
+            }
+          ></i>
+          {isOpen && ' Dashboard'}
         </NavLink>
       </li>
 
       <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/classes' className={linkclassNames}>
-          <i className='ri-school-line'></i> Classes
+          <i
+            className={!isOpen ? 'ri-school-line text-lg' : 'ri-school-line'}
+          ></i>
+
+          {isOpen && ' Classes'}
         </NavLink>
       </li>
 
       <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/students' className={linkclassNames}>
-          <i className='ri-team-line'></i> Students
+          <i className={!isOpen ? 'ri-team-line text-lg' : 'ri-team-line'}></i>
+          {isOpen && ' Students'}
         </NavLink>
       </li>
 
       <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/teachers' className={linkclassNames}>
-          <i className='ri-group-line'></i> Teachers
+          <i
+            className={!isOpen ? 'ri-group-line text-lg' : 'ri-group-line'}
+          ></i>
+
+          {isOpen && ' Teachers'}
         </NavLink>
       </li>
 
       <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/assignment' className={linkclassNames}>
-          <i className='ri-attachment-line'></i> Assignments
+          <i
+            className={
+              !isOpen ? 'ri-attachment-line text-lg' : 'ri-attachment-line'
+            }
+          ></i>
+
+          {isOpen && ' Assignments'}
         </NavLink>
       </li>
 
       <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/exam' className={linkclassNames}>
-          <i className='ri-draft-line'></i> Exam
+          <i
+            className={!isOpen ? 'ri-draft-line text-lg' : 'ri-draft-line'}
+          ></i>
+
+          {isOpen && ' Exam'}
         </NavLink>
       </li>
 
       <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/performance' className={linkclassNames}>
-          <i className='ri-line-chart-line'></i> Performance
+          <i
+            className={
+              !isOpen ? 'ri-line-chart-line text-lg' : 'ri-line-chart-line'
+            }
+          ></i>
+          {isOpen && ' Performance'}
         </NavLink>
       </li>
 
       <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/attendance' className={linkclassNames}>
-          <i className='ri-calendar-line'></i> Attendance
+          <i
+            className={
+              !isOpen ? 'ri-calendar-line text-lg' : 'ri-calendar-line'
+            }
+          ></i>
+
+          {isOpen && ' Attendance'}
         </NavLink>
       </li>
 
       <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/announcement' className={linkclassNames}>
-          <i className='ri-megaphone-line'></i> Announcement
+          <i
+            className={
+              !isOpen ? 'ri-megaphone-line text-lg' : 'ri-megaphone-line'
+            }
+          ></i>
+
+          {isOpen && ' Announcement'}
         </NavLink>
       </li>
 
       <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/events' className={linkclassNames}>
-          <i className='ri-calendar-event-line'></i> Events and Calendar
+          <i
+            className={
+              !isOpen
+                ? 'ri-calendar-event-line text-lg'
+                : 'ri-calendar-event-line'
+            }
+          ></i>
+
+          {isOpen && ' Events and Calendar'}
         </NavLink>
       </li>
 
       <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/profile' className={linkclassNames}>
-          <i className='ri-user-3-line'></i> Profile
+          <i
+            className={!isOpen ? 'ri-user-3-line text-lg' : 'ri-user-3-line'}
+          ></i>
+
+          {isOpen && ' Profile'}
         </NavLink>
       </li>
     </ul>
