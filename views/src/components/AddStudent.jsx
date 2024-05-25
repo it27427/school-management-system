@@ -48,7 +48,7 @@ const AddStudent = ({
 
       <div className='flex justify-end'>
         <Button type='submit' className='btn btn-primary'>
-          Add Student
+          Add Teacher
         </Button>
       </div>
     </Form>
