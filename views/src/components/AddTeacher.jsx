@@ -1,3 +1,7 @@
+import Button from '@/components/Button';
+import Form from '@/components/Form';
+import InputField from '@/components/InputField';
+
 const AddTeacher = ({
   teacherName,
   setTeacherName,
@@ -44,7 +48,7 @@ const AddTeacher = ({
 
       <div className='flex justify-end'>
         <Button type='submit' className='btn btn-primary'>
-          Add Student
+          Add Teacher
         </Button>
       </div>
     </Form>
