@@ -8,37 +8,43 @@ const StudentList = () => {
 
   return (
     <ul className='flex flex-col gap-0.5'>
-      <li>
+      <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/student/dashboard' className={linkclassNames}>
           <i className='ri-dashboard-line'></i> Dashboard
         </NavLink>
       </li>
-      <li>
+
+      <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/student/assignment' className={linkclassNames}>
           <i className='ri-attachment-line'></i> Assignments
         </NavLink>
       </li>
-      <li>
+
+      <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/student/exam' className={linkclassNames}>
           <i className='ri-draft-line'></i> Exam
         </NavLink>
       </li>
-      <li>
+
+      <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/student/performance' className={linkclassNames}>
           <i className='ri-line-chart-line'></i> Performance
         </NavLink>
       </li>
-      <li>
+
+      <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/student/attendance' className={linkclassNames}>
           <i className='ri-calendar-line'></i> Attendance
         </NavLink>
       </li>
-      <li>
+
+      <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/student/announcement' className={linkclassNames}>
           <i className='ri-megaphone-line'></i> Announcement
         </NavLink>
       </li>
-      <li>
+
+      <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/student/profile' className={linkclassNames}>
           <i className='ri-user-3-line'></i> Profile
         </NavLink>

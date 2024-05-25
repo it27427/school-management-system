@@ -8,57 +8,67 @@ const TeacherList = () => {
 
   return (
     <ul className='flex flex-col gap-0.5'>
-      <li>
+      <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/dashboard' className={linkclassNames}>
           <i className='ri-dashboard-line'></i> Dashboard
         </NavLink>
       </li>
-      <li>
+
+      <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/classes' className={linkclassNames}>
           <i className='ri-school-line'></i> Classes
         </NavLink>
       </li>
-      <li>
+
+      <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/students' className={linkclassNames}>
           <i className='ri-team-line'></i> Students
         </NavLink>
       </li>
-      <li>
+
+      <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/teachers' className={linkclassNames}>
           <i className='ri-group-line'></i> Teachers
         </NavLink>
       </li>
-      <li>
+
+      <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/assignment' className={linkclassNames}>
           <i className='ri-attachment-line'></i> Assignments
         </NavLink>
       </li>
-      <li>
+
+      <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/exam' className={linkclassNames}>
           <i className='ri-draft-line'></i> Exam
         </NavLink>
       </li>
-      <li>
+
+      <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/performance' className={linkclassNames}>
           <i className='ri-line-chart-line'></i> Performance
         </NavLink>
       </li>
-      <li>
+
+      <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/attendance' className={linkclassNames}>
           <i className='ri-calendar-line'></i> Attendance
         </NavLink>
       </li>
-      <li>
+
+      <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/announcement' className={linkclassNames}>
           <i className='ri-megaphone-line'></i> Announcement
         </NavLink>
       </li>
-      <li>
+
+      <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/events' className={linkclassNames}>
           <i className='ri-calendar-event-line'></i> Events and Calendar
         </NavLink>
       </li>
-      <li>
+
+      <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/teacher/profile' className={linkclassNames}>
           <i className='ri-user-3-line'></i> Profile
         </NavLink>
