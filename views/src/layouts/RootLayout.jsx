@@ -1,3 +1,4 @@
+import BackToTop from '@/components/BackToTop';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
@@ -9,6 +10,8 @@ const RootLayout = ({ children }) => {
         <div className='container'>{children}</div>
       </main>
       <Footer />
+
+      <BackToTop />
     </>
   );
 };

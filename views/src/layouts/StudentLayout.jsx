@@ -1,3 +1,4 @@
+import BackToTop from '@/components/BackToTop';
 import StudentSidebar from '@/components/StudentSidebar';
 
 const StudentLayout = ({ children }) => {
@@ -9,6 +10,8 @@ const StudentLayout = ({ children }) => {
 
       <div className='w-full lg:w-5/6'>
         <main>{children}</main>
+
+        <BackToTop />
       </div>
     </div>
   );
