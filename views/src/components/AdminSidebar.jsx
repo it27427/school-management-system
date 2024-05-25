@@ -11,7 +11,7 @@ const AdminSidebar = ({ toggleSidebar, isOpen }) => {
       className={
         isOpen
           ? 'sticky top-0 z-50 min-h-screen bg-sky-950 hidden lg:block w-[15rem]'
-          : 'sticky top-0 z-50 min-h-screen bg-sky-950 hidden lg:block w-24'
+          : 'sticky top-0 z-50 min-h-screen bg-sky-950 hidden lg:block w-20'
       }
     >
       <header className='w-full h-16 flex items-center justify-center sticky top-0 bg-sky-950 mb-2'>

@@ -18,10 +18,14 @@ const AdminLayout = ({ children }) => {
         className={
           isOpen
             ? 'w-full lg:w-[calc(100%-15rem)]'
-            : 'w-full lg:w-[calc(100%-6rem)]'
+            : 'w-full lg:w-[calc(100%-5rem)]'
         }
       >
-        <main className='p-4'>{children}</main>
+        <div className='flex flex-col gap-6'>
+          <header className='sticky top-0 z-50 bg-primary'>Admin Header</header>
+          <main className='min-h-screen p-4'>{children}</main>
+          <footer>Admin Footer</footer>
+        </div>
 
         <BackToTop />
       </div>
