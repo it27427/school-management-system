@@ -1,6 +1,8 @@
 import { useState } from 'react';
 
 import BackToTop from '@/components/BackToTop';
+import DashboardFooter from '@/components/DashboardFooter';
+import DashboardHeader from '@/components/DashboardHeader';
 import StudentSidebar from '@/components/StudentSidebar';
 
 const StudentLayout = ({ children }) => {
