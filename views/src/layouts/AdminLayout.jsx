@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 import AdminSidebar from '@/components/AdminSidebar';
 import BackToTop from '@/components/BackToTop';
+import DashboardFooter from '@/components/DashboardFooter';
+import DashboardHeader from '@/components/DashboardHeader';
 
 const AdminLayout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(true);
@@ -22,9 +24,9 @@ const AdminLayout = ({ children }) => {
         }
       >
         <div className='flex flex-col gap-6'>
-          <header className='sticky top-0 z-50 bg-primary'>Admin Header</header>
+          <DashboardHeader />
           <main className='min-h-screen p-4'>{children}</main>
-          <footer>Admin Footer</footer>
+          <DashboardFooter />
         </div>
 
         <BackToTop />
