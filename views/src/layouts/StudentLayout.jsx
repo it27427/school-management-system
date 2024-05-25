@@ -21,7 +21,11 @@ const StudentLayout = ({ children }) => {
             : 'w-full lg:w-[calc(100%-5rem)]'
         }
       >
-        <main>{children}</main>
+        <div className='flex flex-col gap-6'>
+          <DashboardHeader />
+          <main className='min-h-screen p-4'>{children}</main>
+          <DashboardFooter />
+        </div>
 
         <BackToTop />
       </div>
