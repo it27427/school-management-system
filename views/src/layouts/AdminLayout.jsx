@@ -21,6 +21,8 @@ const AdminLayout = ({ children }) => {
         }
       >
         <main className='p-4'>{children}</main>
+
+        <BackToTop />
       </div>
     </div>
   );
