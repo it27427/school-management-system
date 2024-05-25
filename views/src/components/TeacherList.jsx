@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-const TeacherList = () => {
+const TeacherList = ({ isOpen }) => {
   const linkclassNames = ({ isActive }) =>
     isActive
       ? 'py-2 px-3 inline-block w-full bg-sky-700 text-white text-sm'
