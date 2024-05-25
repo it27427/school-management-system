@@ -4,7 +4,7 @@ const BackToTop = () => {
   return (
     <ScrollToTop
       smooth
-      className='flex items-center justify-center rounded-full w-12 h-12 p-3.5'
+      className='flex items-center justify-center rounded-full w-12 h-12 p-3.5 bg-sky-800'
     />
   );
 };
