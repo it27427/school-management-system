@@ -10,8 +10,8 @@ const AddClasses = ({ clsName, setClsName, handleAddClasses }) => {
     >
       <InputField
         type='text'
-        id='clsName'
-        name='clsName'
+        id='clsname'
+        name='clsname'
         className='input input-bordered w-full'
         onChange={(e) => setClsName(e.target.value)}
         placeholder='Enter Class Name'
