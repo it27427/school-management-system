@@ -22,7 +22,7 @@ const AddBook = ({
           name='booktitle'
           className='input input-bordered w-full'
           onChange={(e) => setBookTitle(e.target.value)}
-          placeholder='Enter Book Name'
+          placeholder='Enter Book Title'
           value={bookTitle}
         />
 

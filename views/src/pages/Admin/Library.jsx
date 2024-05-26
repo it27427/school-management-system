@@ -1,7 +1,17 @@
+import { useState } from 'react';
+
 import AddBook from '@/components/AddBook';
 import AdminLayout from '@/layouts/AdminLayout';
 
 const AdminLibrary = () => {
+  const [bookTitle, setBookTitle] = useState('');
+  const [bookAuthor, setBookAuthor] = useState('');
+
+  const handleAddBook = (e) => {
+    e.preventDefault();
+    console.log('Book Added', { title: bookTitle, author: bookAuthor });
+  };
+
   return (
     <AdminLayout>
       <div className='grid gap-6 lg:grid-cols-2'>
