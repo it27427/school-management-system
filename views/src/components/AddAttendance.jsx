@@ -1,19 +1,25 @@
-import React from 'react';
+import { useState } from 'react';
+import Button from './Button';
 import Checkbox from './Checkbox';
+import Form from './Form';
 
 const AddAttendance = () => {
+  const [] = useState('');
+
   return (
-    <div className='flex items-center gap-3'>
-      <div className='max-w-28'>
+    <Form className='flex flex-col gap-4 max-w-xs md:max-w-md'>
+      <div className='flex items-center justify-start gap-3'>
         <Checkbox checkTitle='Present' />
-      </div>
-      <div className='max-w-24'>
         <Checkbox checkTitle='Absent' />
-      </div>
-      <div className='max-w-44'>
         <Checkbox checkTitle='Absent With Apology' />
       </div>
-    </div>
+
+      <div className='flex justify-start'>
+        <Button type='submit' className='btn btn-primary'>
+          Submit
+        </Button>
+      </div>
+    </Form>
   );
 };
 
