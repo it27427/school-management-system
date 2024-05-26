@@ -1,5 +1,3 @@
-import React from 'react';
-
 const SchoolPerformance = ({ schoolPerformanceData }) => {
   return (
     <div className='flex flex-col'>
