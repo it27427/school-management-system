@@ -1,7 +1,13 @@
 import React from 'react';
 
-const IndividualPerformance = () => {
-  return <div></div>;
+const IndividualPerformance = ({ student }) => {
+  return (
+    <>
+      <p>
+        <span className='font-bold'>{student.name}</span> : {student.score}
+      </p>
+    </>
+  );
 };
 
 export default IndividualPerformance;

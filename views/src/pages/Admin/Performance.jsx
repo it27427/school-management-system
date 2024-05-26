@@ -53,7 +53,9 @@ const AdminPerformance = () => {
             Individual Performance
           </h2>
           <Card>
-            <IndividualPerformance />
+            {individualPerformanceData.map((student) => (
+              <IndividualPerformance student={student} key={student.id} />
+            ))}
           </Card>
         </div>
       </div>
