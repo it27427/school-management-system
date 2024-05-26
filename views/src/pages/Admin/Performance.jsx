@@ -1,5 +1,9 @@
 import AdminLayout from '@/layouts/AdminLayout';
 
+import Card from '@/components/Card';
+import IndividualPerformance from '@/components/IndividualPerformance';
+import SchoolPerformance from '@/components/SchoolPerformance';
+
 const AdminPerformance = () => {
   const schoolPerformanceData = {
     averageScore: 85,
@@ -36,7 +40,23 @@ const AdminPerformance = () => {
 
   return (
     <AdminLayout>
-      <h1>Admin Performance Page</h1>
+      <div className='flex flex-col gap-8'>
+        <div className='flex flex-col gap-3'>
+          <h2 className='text-xl font-bold uppercase'>School Performance</h2>
+          <Card>
+            <SchoolPerformance schoolPerformanceData={schoolPerformanceData} />
+          </Card>
+        </div>
+
+        <div className='flex flex-col gap-3'>
+          <h2 className='text-xl font-bold uppercase'>
+            Individual Performance
+          </h2>
+          <Card>
+            <IndividualPerformance />
+          </Card>
+        </div>
+      </div>
     </AdminLayout>
   );
 };
