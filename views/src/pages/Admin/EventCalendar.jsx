@@ -1,8 +1,16 @@
+import { useState } from 'react';
+
+import AdminLayout from '@/layouts/AdminLayout';
+
+import Calendar from '@/components/Calendar';
+
 const AdminEventCalendar = () => {
+  const [] = useState('');
+
   return (
-    <>
-      <h1>Admin Event Calendar</h1>
-    </>
+    <AdminLayout>
+      <Calendar />
+    </AdminLayout>
   );
 };
 
