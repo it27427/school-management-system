@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import AddExam from '@/components/AddExam';
+import ExamsList from '@/components/ExamsList';
 import AdminLayout from '@/layouts/AdminLayout';
 
 const AdminExam = () => {
@@ -33,7 +34,7 @@ const AdminExam = () => {
           />
         </div>
 
-        {/* <AssignmentList /> */}
+        <ExamsList />
       </div>
     </AdminLayout>
   );
