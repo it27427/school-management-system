@@ -1,7 +1,9 @@
 import { useState } from 'react';
 
-import AddBook from '@/components/AddBook';
 import AdminLayout from '@/layouts/AdminLayout';
+
+import AddBook from '@/components/AddBook';
+import BookList from '@/components/BookList';
 
 const AdminLibrary = () => {
   const [bookTitle, setBookTitle] = useState('');
@@ -27,7 +29,7 @@ const AdminLibrary = () => {
           />
         </div>
 
-        {/* <BookList /> */}
+        <BookList />
       </div>
     </AdminLayout>
   );
