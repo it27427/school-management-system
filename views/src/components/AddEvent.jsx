@@ -1,8 +1,9 @@
+import Button from '@/components/Button';
 import Card from '@/components/Card';
 import Form from '@/components/Form';
 import InputField from '@/components/InputField';
 
-const AddEvent = (event, setEvent, handleAddEvent) => {
+const AddEvent = ({ event, setEvent, handleAddEvent }) => {
   return (
     <Card>
       <Form
