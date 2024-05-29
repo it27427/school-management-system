@@ -30,7 +30,7 @@ const Assignment = () => {
   const chartOptions = {
     scales: {
       y: {
-        // type: 'linear',
+        type: 'linear',
         beginAtZero: true,
         max: 100,
       },
