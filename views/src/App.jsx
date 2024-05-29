@@ -32,6 +32,7 @@ import StudentAnnouncement from '@/pages/Students/Announcement';
 import StudentAssignment from '@/pages/Students/Assignment';
 import StudentAttendance from '@/pages/Students/Attendance';
 import StudentExam from '@/pages/Students/Exam';
+import StudentLibrary from '@/pages/Students/Library';
 import StudentPerformance from '@/pages/Students/Performance';
 import StudentProfile from '@/pages/Students/Profile';
 
@@ -88,6 +89,7 @@ const App = () => {
         <Route path='/student/assignment' element={<StudentAssignment />} />
         <Route path='/student/attendance' element={<StudentAttendance />} />
         <Route path='/student/exam' element={<StudentExam />} />
+        <Route path='/student/library' element={<StudentLibrary />} />
         <Route path='/student/performance' element={<StudentPerformance />} />
         <Route path='/student/profile' element={<StudentProfile />} />
 

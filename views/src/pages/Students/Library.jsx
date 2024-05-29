@@ -1,6 +1,6 @@
 import StudentLayout from '@/layouts/StudentLayout';
 
-const Library = () => {
+const StudentLibrary = () => {
   <StudentLayout>
     <div className='flex flex-col gap-6'>
       <h2 className='text-xl font-bold uppercase'>Library</h2>
@@ -8,4 +8,4 @@ const Library = () => {
   </StudentLayout>;
 };
 
-export default Library;
+export default StudentLibrary;

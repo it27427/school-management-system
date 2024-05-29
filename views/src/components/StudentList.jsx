@@ -40,6 +40,17 @@ const StudentList = ({ isOpen }) => {
       </li>
 
       <li className={!isOpen ? 'text-center' : ''}>
+        <NavLink to='/student/library' className={linkclassNames}>
+          <i
+            className={
+              !isOpen ? 'ri-building-4-line text-lg' : 'ri-building-4-line'
+            }
+          ></i>
+          {isOpen && ' Library'}
+        </NavLink>
+      </li>
+
+      <li className={!isOpen ? 'text-center' : ''}>
         <NavLink to='/student/performance' className={linkclassNames}>
           <i
             className={
