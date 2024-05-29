@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const studentSchema = new mongoose.Schema({
   name: {
-    type: Sting,
+    type: String,
     required: true,
     trim: true,
   },

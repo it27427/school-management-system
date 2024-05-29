@@ -13,6 +13,10 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(morgan('dev'));
 
+const studentRouter = require('./routes/student.router');
+
+app.use('/api/v1/students', studentRouter);
+
 app.get('/', (req, res) => {
   res.send('<h1>Hello from Express</h1>');
 });
