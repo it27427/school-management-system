@@ -3,7 +3,9 @@ import StudentLayout from '@/layouts/StudentLayout';
 const Announcement = () => {
   return (
     <StudentLayout>
-      <h1>Students Announcement Page</h1>
+      <div className='flex flex-col gap-6'>
+        <h2 className='text-xl font-bold uppercase'>Announcements</h2>
+      </div>
     </StudentLayout>
   );
 };
