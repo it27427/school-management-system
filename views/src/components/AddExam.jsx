@@ -49,20 +49,6 @@ const AddExam = ({
         </div>
 
         <div className='flex flex-col gap-2'>
-          <label htmlFor='regnumber'>Registration Number</label>
-
-          <InputField
-            type='text'
-            id='regnumber'
-            name='regnumber'
-            className='input input-bordered w-full'
-            onChange={(e) => setRegNumber(e.target.value)}
-            placeholder='Enter Registration Number'
-            value={regNumber}
-          />
-        </div>
-
-        <div className='flex flex-col gap-2'>
           <label htmlFor='examclass'>Class</label>
 
           <InputField
