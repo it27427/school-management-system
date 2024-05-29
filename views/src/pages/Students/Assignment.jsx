@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-// import { Bar } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 
 import Card from '@/components/Card';
 import StudentLayout from '@/layouts/StudentLayout';
@@ -13,10 +13,10 @@ const Assignment = () => {
   };
 
   const barChartData = {
-    labels: examResultsData.subjects,
+    label: examResultsData.subjects,
     datasets: [
       {
-        labels: 'Exam Results',
+        label: 'Exam Results',
         backgroundColor: '#007bff',
         borderColor: '#007bff',
         borderWidth: '1',
@@ -28,6 +28,7 @@ const Assignment = () => {
   };
 
   const chartOptions = {
+    responsive: true,
     scales: {
       y: {
         type: 'linear',
@@ -52,8 +53,9 @@ const Assignment = () => {
                 </li>
               ))}
             </ul>
+
             <Card>
-              {/* <Bar ref={chartRef} data={barChartData} options={chartOptions} /> */}
+              <Bar ref={chartRef} data={barChartData} options={chartOptions} />
             </Card>
           </div>
         </div>

@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 
+import { Chart, registerables } from 'chart.js';
+Chart.register(...registerables);
+
 // REMIX-ICONS
 import 'remixicon/fonts/remixicon.css';
 // TAILWIND-CSS
