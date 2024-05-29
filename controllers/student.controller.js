@@ -1,11 +1,12 @@
 const Student = require('../models/student.model');
+const { handleValidationError } = require('../middlewares/error.handler');
 
 const createStudent = async (req, res, next) => {
   const { name, registrationNumber, grade } = req.body;
 
   try {
     if (!name || !registrationNumber || !grade) {
-      return next('Please fill up full form', 400);
+      handleValidationError('Please fill up full form', 400);
     }
 
     await Student.create({ name, registrationNumber, grade });
