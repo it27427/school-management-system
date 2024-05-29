@@ -11,30 +11,32 @@ const Dashboard = () => {
 
           <div className='grid md:grid-cols-3 gap-4'>
             <CountCard>
-              <h2 className='card-title'>Students</h2>
-              <p>5</p>
+              <h2 className='card-title'>Total Students</h2>
+              <p>50</p>
             </CountCard>
 
             <CountCard>
-              <h2 className='card-title'>Classes</h2>
-              <p>5</p>
-            </CountCard>
-
-            <CountCard>
-              <h2 className='card-title'>Assignments</h2>
-              <p>5</p>
-            </CountCard>
-
-            <CountCard>
-              <h2 className='card-title'>Events</h2>
+              <h2 className='card-title'>Total Teachers</h2>
               <p>20</p>
             </CountCard>
 
             <CountCard>
-              <h2 className='card-title'>Exam</h2>
-              <p>1</p>
+              <h2 className='card-title'>Total Classes</h2>
+              <p>5</p>
             </CountCard>
           </div>
+        </div>
+
+        <div className='flex flex-col gap-6'>
+          <h2 className='text-xl font-bold uppercase'>Recent Activity</h2>
+
+          <div className='grid md:grid-cols-3 gap-4'></div>
+        </div>
+
+        <div className='flex flex-col gap-6'>
+          <h2 className='text-xl font-bold uppercase'>Upcoming Events</h2>
+
+          <div className='grid md:grid-cols-3 gap-4'></div>
         </div>
       </div>
     </TeacherLayout>
