@@ -20,9 +20,11 @@ const { errorHandler } = require('./middlewares/error.handler');
 
 const studentRouter = require('./routes/student.router');
 const eventRouter = require('./routes/event.router');
+const libraryRouter = require('./routes/library.router');
 
 app.use('/api/v1/students', studentRouter);
 app.use('/api/v1/events', eventRouter);
+app.use('/api/v1/library', libraryRouter);
 
 app.use((error, req, res, next) => {
   errorHandler(error, req, res, next);
