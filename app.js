@@ -25,8 +25,8 @@ app.use((error, req, res, next) => {
   errorHandler(error, req, res, next);
 });
 
-// app.get('/', (req, res) => {
-//   res.send('<h1>Hello from Express</h1>');
-// });
+app.get('/', (req, res) => {
+  res.send('<h1>Hello from Express</h1>');
+});
 
 module.exports = app;
