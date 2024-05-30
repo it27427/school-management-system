@@ -1,15 +1,16 @@
-const Events = require('../models/events.model');
+const Event = require('../models/event.model');
 const { handleValidationError } = require('../middlewares/error.handler');
 
-const createEvents = async (req, res, next) => {
-  const { events } = req.body;
+const createEvent = async (req, res, next) => {
+  const { event } = req.body;
 
   try {
-    if (!events) {
+    if (!event) {
       handleValidationError('Please fill up full form', 400);
     }
 
-    await Events.create({ events });
+    await Event.create({ event });
+
     res.status(201).json({
       success: true,
       message: 'Event Created Successfully!',
@@ -22,10 +23,10 @@ const createEvents = async (req, res, next) => {
 
 const getAllEvents = async (req, res, next) => {
   try {
-    const events = await Events.find();
+    const event = await Event.find();
     res.status(200).json({
       success: true,
-      events,
+      event,
     });
   } catch (error) {
     next(error);
@@ -34,6 +35,6 @@ const getAllEvents = async (req, res, next) => {
 };
 
 module.exports = {
-  createEvents,
+  createEvent,
   getAllEvents,
 };

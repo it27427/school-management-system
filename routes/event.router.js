@@ -2,11 +2,11 @@ const express = require('express');
 const router = express.Router();
 
 const {
-  createEvents,
+  createEvent,
   getAllEvents,
-} = require('../controllers/events.controller');
+} = require('../controllers/event.controller');
 
-router.post('/create', createEvents);
+router.post('/create', createEvent);
 router.get('/getall', getAllEvents);
 
 module.exports = router;
