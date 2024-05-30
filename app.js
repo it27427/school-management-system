@@ -4,8 +4,8 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const connectDB = require('./config/db');
-
 const app = express();
+const { errorHandler } = require('./middlewares/error.handler');
 
 connectDB();
 
@@ -21,8 +21,12 @@ const studentRouter = require('./routes/student.router');
 
 app.use('/api/v1/students', studentRouter);
 
-app.get('/', (req, res) => {
-  res.send('<h1>Hello from Express</h1>');
+app.use((error, req, res, next) => {
+  errorHandler(error, req, res, next);
 });
+
+// app.get('/', (req, res) => {
+//   res.send('<h1>Hello from Express</h1>');
+// });
 
 module.exports = app;
