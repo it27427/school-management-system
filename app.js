@@ -18,8 +18,10 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 const studentRouter = require('./routes/student.router');
+const eventsRouter = require('./routes/events.router');
 
 app.use('/api/v1/students', studentRouter);
+app.use('/api/v1/events', eventsRouter);
 
 app.use((error, req, res, next) => {
   errorHandler(error, req, res, next);

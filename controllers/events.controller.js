@@ -1,4 +1,5 @@
 const Events = require('../models/events.model');
+const { handleValidationError } = require('../middlewares/error.handler');
 
 const createEvents = async (req, res, next) => {
   const { events } = req.body;
@@ -11,7 +12,7 @@ const createEvents = async (req, res, next) => {
     await Events.create({ events });
     res.status(201).json({
       success: true,
-      message: 'Events Created Successfully!',
+      message: 'Event Created Successfully!',
     });
   } catch (error) {
     next(error);
