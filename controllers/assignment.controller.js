@@ -2,14 +2,14 @@ const Assignment = require('../models/assignment.model');
 const { handleValidationError } = require('../middlewares/error.handler');
 
 const createAssignment = async (req, res, next) => {
-  const { event } = req.body;
+  const { title, description, grade, deadline } = req.body;
 
   try {
-    if (!event) {
+    if (!title || !description || !grade || !deadline) {
       handleValidationError('Please fill up full form', 400);
     }
 
-    await Assignment.create({ event });
+    await Assignment.create({ title, description, grade, deadline });
 
     res.status(201).json({
       success: true,
