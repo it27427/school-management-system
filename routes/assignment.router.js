@@ -4,7 +4,7 @@ const router = express.Router();
 const {
   createAssignment,
   getAllAssignments,
-} = require('../controllers/event.controller');
+} = require('../controllers/assignment.controller');
 
 router.post('/create', createAssignment);
 router.get('/getall', getAllAssignments);

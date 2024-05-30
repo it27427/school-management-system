@@ -21,7 +21,7 @@ const createAssignment = async (req, res, next) => {
   }
 };
 
-const getAllEvents = async (req, res, next) => {
+const getAllAssignments = async (req, res, next) => {
   try {
     const assignments = await Assignment.find();
     res.status(200).json({
