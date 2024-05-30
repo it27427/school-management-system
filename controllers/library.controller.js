@@ -1,7 +1,7 @@
-const Library = require('../models/library.model');
+const Book = require('../models/library.model');
 const { handleValidationError } = require('../middlewares/error.handler');
 
-const createLibrary = async (req, res, next) => {
+const createBook = async (req, res, next) => {
   const { bookname, author } = req.body;
 
   try {
@@ -9,10 +9,10 @@ const createLibrary = async (req, res, next) => {
       handleValidationError('Please fill up full form', 400);
     }
 
-    await Library.create({ bookname, author });
+    await Book.create({ bookname, author });
     res.status(201).json({
       success: true,
-      message: 'Library Created Successfully!',
+      message: 'Book Created Successfully!',
     });
   } catch (error) {
     next(error);
@@ -20,12 +20,12 @@ const createLibrary = async (req, res, next) => {
   }
 };
 
-const getAllLibrary = async (req, res, next) => {
+const getAllBooks = async (req, res, next) => {
   try {
-    const libraries = await Library.find();
+    const books = await Book.find();
     res.status(200).json({
       success: true,
-      libraries,
+      books,
     });
   } catch (error) {
     next(error);
@@ -34,6 +34,6 @@ const getAllLibrary = async (req, res, next) => {
 };
 
 module.exports = {
-  createLibrary,
-  getAllLibrary,
+  createBook,
+  getAllBooks,
 };

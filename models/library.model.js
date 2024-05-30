@@ -12,6 +12,6 @@ const librarySchema = new mongoose.Schema({
   },
 });
 
-const Library = mongoose.model('Library', librarySchema);
+const Book = mongoose.model('Library', librarySchema);
 
-module.exports = Library;
+module.exports = Book;

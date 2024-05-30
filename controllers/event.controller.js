@@ -23,10 +23,10 @@ const createEvent = async (req, res, next) => {
 
 const getAllEvents = async (req, res, next) => {
   try {
-    const event = await Event.find();
+    const events = await Event.find();
     res.status(200).json({
       success: true,
-      event,
+      events,
     });
   } catch (error) {
     next(error);
