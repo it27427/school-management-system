@@ -6,7 +6,7 @@ const {
   createBook,
 } = require('../controllers/library.controller');
 
-router.post('/create', createBook);
+router.post('/', createBook);
 router.get('/getall', getAllBooks);
 
 module.exports = router;

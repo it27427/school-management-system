@@ -6,7 +6,7 @@ const {
   getAllAnnouncements,
 } = require('../controllers/announcement.controller');
 
-router.post('/create', createAnnouncement);
+router.post('/', createAnnouncement);
 router.get('/getall', getAllAnnouncements);
 
 module.exports = router;

@@ -6,7 +6,7 @@ const {
   getAllAssignments,
 } = require('../controllers/assignment.controller');
 
-router.post('/create', createAssignment);
+router.post('/', createAssignment);
 router.get('/getall', getAllAssignments);
 
 module.exports = router;
