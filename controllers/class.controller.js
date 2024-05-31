@@ -2,14 +2,14 @@ const Class = require('../models/class.model');
 const { handleValidationError } = require('../middlewares/error.handler');
 
 const createClass = async (req, res, next) => {
-  const { classname } = req.body;
+  const { grade } = req.body;
 
   try {
-    if (!classname) {
+    if (!grade) {
       handleValidationError('Please fill up class', 400);
     }
 
-    await Class.create({ classname });
+    await Class.create({ grade });
     res.status(201).json({
       success: true,
       message: 'Class Created Successfully!',
@@ -22,10 +22,10 @@ const createClass = async (req, res, next) => {
 
 const getAllClasses = async (req, res, next) => {
   try {
-    const classes = await Class.find();
+    const grades = await Class.find();
     res.status(200).json({
       success: true,
-      classes,
+      grades,
     });
   } catch (error) {
     next(error);
