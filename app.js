@@ -25,6 +25,7 @@ const announcementRouter = require('./routes/announcement.router');
 const assignmentRouter = require('./routes/assignment.router');
 const attendanceRouter = require('./routes/attendance.router');
 const classRouter = require('./routes/class.router');
+const examRouter = require('./routes/exam.router');
 
 app.use('/api/v1/students', studentRouter);
 app.use('/api/v1/events', eventRouter);
@@ -33,6 +34,7 @@ app.use('/api/v1/performance', announcementRouter);
 app.use('/api/v1/assignment', assignmentRouter);
 app.use('/api/v1/attendance', attendanceRouter);
 app.use('/api/v1/classes', classRouter);
+app.use('/api/v1/exam', examRouter);
 
 app.use((error, req, res, next) => {
   errorHandler(error, req, res, next);
