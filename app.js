@@ -23,12 +23,14 @@ const eventRouter = require('./routes/event.router');
 const libraryRouter = require('./routes/library.router');
 const announcementRouter = require('./routes/announcement.router');
 const assignmentRouter = require('./routes/assignment.router');
+const attendanceRouter = require('./routes/attendance.router');
 
 app.use('/api/v1/students', studentRouter);
 app.use('/api/v1/events', eventRouter);
 app.use('/api/v1/library', libraryRouter);
-app.use('/api/v1/announcements', announcementRouter);
-app.use('/api/v1/assignments', assignmentRouter);
+app.use('/api/v1/performance', announcementRouter);
+app.use('/api/v1/assignment', assignmentRouter);
+app.use('/api/v1/attendance', attendanceRouter);
 
 app.use((error, req, res, next) => {
   errorHandler(error, req, res, next);

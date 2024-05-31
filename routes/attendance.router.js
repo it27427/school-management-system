@@ -2,11 +2,11 @@ const express = require('express');
 const router = express.Router();
 
 const {
-  createAttendance,
+  markAttendance,
   getAllAttendances,
 } = require('../controllers/attendance.controller');
 
-router.post('/', createAttendance);
+router.post('/', markAttendance);
 router.get('/getall', getAllAttendances);
 
 module.exports = router;

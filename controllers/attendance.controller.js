@@ -1,19 +1,30 @@
 const Attendance = require('../models/attendance.model');
 const { handleValidationError } = require('../middlewares/error.handler');
 
-const createAttendance = async (req, res, next) => {
-  const { title, description, grade, deadline } = req.body;
+const markAttendance = async (req, res, next) => {
+  const { attendanceDate } = req.body;
 
   try {
-    if (!title || !description || !grade || !deadline) {
-      handleValidationError('Please fill up full form', 400);
+    if (
+      !attendanceDate ||
+      !Array.isArray(attendanceDate) ||
+      attendanceDate.length === 0
+    ) {
+      handleValidationError('Attendance Date is Missing', 400);
     }
 
-    await Attendance.create({ title, description, grade, deadline });
+    const attendanceRecords = await Promise.all(
+      attendanceDate.map(async (record) => {
+        const { student, status } = record;
+
+        return await Attendance.create({ student, status });
+      })
+    );
 
     res.status(201).json({
       success: true,
-      message: 'Attendance Created Successfully!',
+      message: 'Attendance Marked Successfully!',
+      attendanceRecords,
     });
   } catch (error) {
     next(error);
@@ -23,7 +34,10 @@ const createAttendance = async (req, res, next) => {
 
 const getAllAttendances = async (req, res, next) => {
   try {
-    const attendances = await Attendance.find();
+    const attendances = await Attendance.find().populate(
+      'student',
+      'name registrationNumber grade'
+    );
     res.status(200).json({
       success: true,
       attendances,
@@ -35,6 +49,6 @@ const getAllAttendances = async (req, res, next) => {
 };
 
 module.exports = {
-  createAttendance,
+  markAttendance,
   getAllAttendances,
 };
