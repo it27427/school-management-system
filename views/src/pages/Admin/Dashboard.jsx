@@ -1,8 +1,42 @@
+import { useEffect, useState } from 'react';
+
 import AdminLayout from '@/layouts/AdminLayout';
 
 import CountCard from '@/components/CountCard';
+import EventsList from '@/components/EventsList';
 
 const Dashboard = () => {
+  const [events, setEvents] = useState('');
+  const [announcements, setAnnouncements] = useState('');
+  const [performance, setPerformances] = useState('');
+
+  const fetchEvents = async () => {
+    try {
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const fetchAnnouncements = async () => {
+    try {
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const fetchPerformances = async () => {
+    try {
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchEvents();
+    fetchAnnouncements();
+    fetchPerformances();
+  }, []);
+
   return (
     <AdminLayout>
       <div className='flex flex-col gap-8'>
@@ -27,14 +61,10 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className='flex flex-col gap-6'>
-          <h2 className='text-xl font-bold uppercase'>Recent Activity</h2>
-
-          <div className='grid md:grid-cols-3 gap-4'></div>
-        </div>
+        <EventsList />
 
         <div className='flex flex-col gap-6'>
-          <h2 className='text-xl font-bold uppercase'>Upcoming Events</h2>
+          <h2 className='text-xl font-bold uppercase'>Performance</h2>
 
           <div className='grid md:grid-cols-3 gap-4'></div>
         </div>
