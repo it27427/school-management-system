@@ -12,12 +12,12 @@ const examSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-    grade: {
+    className: {
       type: String,
       required: true,
     },
     marks: {
-      type: String,
+      type: Number,
       required: true,
     },
   },

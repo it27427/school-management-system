@@ -2,14 +2,14 @@ const Exam = require('../models/exam.model');
 const { handleValidationError } = require('../middlewares/error.handler');
 
 const createExam = async (req, res, next) => {
-  const { name, registrationNumber, grade, marks } = req.body;
+  const { name, registrationNumber, className, marks } = req.body;
 
   try {
-    if (!name || !registrationNumber || !grade || !marks) {
+    if (!name || !registrationNumber || !className || !marks) {
       handleValidationError('Please fill up full form', 400);
     }
 
-    await Exam.create({ name, registrationNumber, grade, marks });
+    await Exam.create({ name, registrationNumber, className, marks });
     res.status(201).json({
       success: true,
       message: 'Exam Created Successfully!',
