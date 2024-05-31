@@ -22,10 +22,10 @@ const createClass = async (req, res, next) => {
 
 const getAllClasses = async (req, res, next) => {
   try {
-    const grades = await Class.find();
+    const classes = await Class.find();
     res.status(200).json({
       success: true,
-      grades,
+      classes,
     });
   } catch (error) {
     next(error);
