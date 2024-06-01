@@ -3,7 +3,7 @@ import Card from '@/components/Card';
 import Form from '@/components/Form';
 import InputField from '@/components/InputField';
 
-const AddClasses = ({ clsName, setClsName, handleAddClasses }) => {
+const AddClasses = ({ newClassName, setNewClassName, handleAddClasses }) => {
   return (
     <Card>
       <Form
@@ -12,12 +12,12 @@ const AddClasses = ({ clsName, setClsName, handleAddClasses }) => {
       >
         <InputField
           type='text'
-          id='clsname'
-          name='clsname'
+          id='newClassName'
+          name='newclassname'
           className='input input-bordered w-full'
-          onChange={(e) => setClsName(e.target.value)}
+          onChange={(e) => setNewClassName(e.target.value)}
           placeholder='Enter Class Name'
-          value={clsName}
+          value={newClassName}
         />
 
         <div className='flex justify-end'>

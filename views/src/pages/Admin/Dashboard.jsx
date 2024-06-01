@@ -15,29 +15,36 @@ const Dashboard = () => {
     try {
       const url = 'http://localhost:8080/api/v1/events/getall';
       const response = await axios.get(url);
+      setEvents(response.data.events || []);
     } catch (error) {
-      console.error(error);
+      console.error('Event Fetching Error', error);
     }
   };
 
   const fetchAnnouncements = async () => {
     try {
+      const url = 'http://localhost:8080/api/v1/announcements/getall';
+      const response = await axios.get(url);
+      setAnnouncements(response.data.announcements || []);
     } catch (error) {
-      console.error(error);
+      console.error('Announcement Fetching Error', error);
     }
   };
 
-  const fetchPerformances = async () => {
-    try {
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  // const fetchPerformances = async () => {
+  //   try {
+  //     const url = 'http://localhost:8080/api/v1/performance/getall';
+  //     const response = await axios.get(url);
+  //     setPerformances(response.data.performance || []);
+  //   } catch (error) {
+  //     console.error('Performance Fetching Error', error);
+  //   }
+  // };
 
   useEffect(() => {
     fetchEvents();
     fetchAnnouncements();
-    fetchPerformances();
+    // fetchPerformances();
   }, []);
 
   return (
