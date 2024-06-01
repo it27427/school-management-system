@@ -8,12 +8,7 @@ const app = express();
 
 connectDB();
 
-app.use(
-  cors({
-    origin: [process.env.FRONTEND_URL],
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  })
-);
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
