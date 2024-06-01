@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 import AdminLayout from '@/layouts/AdminLayout';
@@ -12,6 +13,8 @@ const Dashboard = () => {
 
   const fetchEvents = async () => {
     try {
+      const url = 'http://localhost:8080/api/v1/events/getall';
+      const response = await axios.get(url);
     } catch (error) {
       console.error(error);
     }
