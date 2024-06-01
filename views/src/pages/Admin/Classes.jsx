@@ -24,9 +24,18 @@ const AdminClasses = () => {
     }
   };
 
-  const handleAddClasses = (e) => {
+  const handleAddClasses = async (e) => {
     e.preventDefault();
-    console.log('Class added');
+
+    if (newClassName.trim() !== '') {
+      try {
+        const url = 'http://localhost:8080/api/v1/events/getall';
+        const response = await axios.get(url);
+        setEvents(response.data.events || []);
+      } catch (error) {
+        console.error('Event Fetching Error', error);
+      }
+    }
   };
 
   useEffect(() => {
