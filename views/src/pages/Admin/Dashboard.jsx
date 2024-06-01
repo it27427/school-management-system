@@ -23,9 +23,10 @@ const Dashboard = () => {
 
   const fetchAnnouncements = async () => {
     try {
-      const url = 'http://localhost:8080/api/v1/announcements/getall';
+      const url = 'http://localhost:8080/api/v1/announcement/getall';
       const response = await axios.get(url);
       setAnnouncements(response.data.announcements || []);
+      console.log(response.data.announcements);
     } catch (error) {
       console.error('Announcement Fetching Error', error);
     }
@@ -35,7 +36,7 @@ const Dashboard = () => {
   //   try {
   //     const url = 'http://localhost:8080/api/v1/performance/getall';
   //     const response = await axios.get(url);
-  //     setPerformances(response.data.performance || []);
+  //     setPerformances(response.data.performances || []);
   //   } catch (error) {
   //     console.error('Performance Fetching Error', error);
   //   }
@@ -76,7 +77,11 @@ const Dashboard = () => {
         <div className='flex flex-col gap-6'>
           <h2 className='text-xl font-bold uppercase'>Performance</h2>
 
-          <div className='grid md:grid-cols-3 gap-4'></div>
+          <div className='grid md:grid-cols-3 gap-4'>
+            {/* {performance.map((item, index) => (
+              <div key={index}>{item.grade}</div>
+            ))} */}
+          </div>
         </div>
       </div>
     </AdminLayout>

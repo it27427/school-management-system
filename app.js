@@ -31,7 +31,7 @@ const teacherRouter = require('./routes/teacher.router');
 app.use('/api/v1/students', studentRouter);
 app.use('/api/v1/events', eventRouter);
 app.use('/api/v1/library', libraryRouter);
-app.use('/api/v1/performance', announcementRouter);
+app.use('/api/v1/announcement', announcementRouter);
 app.use('/api/v1/assignment', assignmentRouter);
 app.use('/api/v1/attendance', attendanceRouter);
 app.use('/api/v1/classes', classRouter);
