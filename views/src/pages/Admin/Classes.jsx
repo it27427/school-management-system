@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import AdminLayout from '@/layouts/AdminLayout';
 
 import AddClasses from '@/components/AddClasses';
-import ClassesList from '@/components/ClassesList';
+import Card from '@/components/Card';
 
 const AdminClasses = () => {
   const [newClassName, setNewClassName] = useState('');
@@ -29,9 +29,17 @@ const AdminClasses = () => {
 
     if (newClassName.trim() !== '') {
       try {
-        const url = 'http://localhost:8080/api/v1/events/getall';
-        const response = await axios.get(url);
-        setEvents(response.data.events || []);
+        const url = 'http://localhost:8080/api/v1/classes';
+        const response = await axios.post(url, { grade: newClassName });
+        setClasses((pervClases) => {
+          if (Array.isArray(pervClases)) {
+            return [...pervClases, response.data];
+          } else {
+            console.error('Error While Adding Classes', pervClases);
+            return [];
+          }
+        });
+        setNewClassName('');
       } catch (error) {
         console.error('Event Fetching Error', error);
       }
@@ -55,7 +63,20 @@ const AdminClasses = () => {
           />
         </div>
 
-        <ClassesList />
+        <div className='flex flex-col gap-6'>
+          <h2 className='font-bold text-xl uppercase'>All Classes</h2>
+
+          <Card>
+            {Array.isArray(
+              classes &&
+                classes.map((item, index) => (
+                  <div key={index}>{item.grade}</div>
+                ))
+            )}
+          </Card>
+        </div>
+
+        {/* <ClassesList /> */}
       </div>
     </AdminLayout>
   );
