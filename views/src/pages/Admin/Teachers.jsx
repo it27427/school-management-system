@@ -15,7 +15,7 @@ const AdminTeachers = () => {
 
   const fetchTeachers = async () => {
     try {
-      const url = 'http://localhost:8080/api/v1/students/getall';
+      const url = 'http://localhost:8080/api/v1/teachers/getall';
       const response = await axios.get(url);
       if (response.data && response.data.teachers) {
         setTeachers(response.data.teachers);
@@ -23,7 +23,7 @@ const AdminTeachers = () => {
         console.error('Unexpected response structure', response);
       }
     } catch (error) {
-      console.error('Students Fetching Error', error);
+      console.error('Teachers Fetching Error', error);
     }
   };
 
@@ -58,8 +58,8 @@ const AdminTeachers = () => {
 
           <AddTeacher
             newTeacher={newTeacher}
-            setTeacherName={setTeacherName}
-            setTeacherSubject={setTeacherSubject}
+            setNewTeacher={setNewTeacher}
+            teachers={teachers}
             handleAddTeacher={handleAddNewTeacher}
           />
         </div>
