@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import AdminLayout from '@/layouts/AdminLayout';
 
@@ -15,10 +15,33 @@ const Students = () => {
   });
   const [students, setStudents] = useState('');
 
+  const fetchStudents = async () => {
+    try {
+      const url = 'http://localhost:8080/api/v1/students/getall';
+      const response = await axios.get(url);
+      setEvents(response.data.events || []);
+    } catch (error) {
+      console.error('Event Fetching Error', error);
+    }
+  };
+
+  const fetchAnnouncements = async () => {
+    try {
+      const url = 'http://localhost:8080/api/v1/announcement/getall';
+      const response = await axios.get(url);
+      setAnnouncements(response.data.announcements || []);
+      console.log(response.data.announcements);
+    } catch (error) {
+      console.error('Announcement Fetching Error', error);
+    }
+  };
+
   const handleAddStudent = (e) => {
     e.preventDefault();
     console.log('Student Added');
   };
+
+  useEffect(() => {}, []);
 
   return (
     <AdminLayout>
