@@ -9,10 +9,11 @@ const createTeacher = async (req, res, next) => {
       handleValidationError('Please fill up full form', 400);
     }
 
-    await Teacher.create({ name, email, subject });
+    const teacher = await Teacher.create({ name, email, subject });
     res.status(201).json({
       success: true,
       message: 'Teacher Created Successfully!',
+      teacher,
     });
   } catch (error) {
     next(error);

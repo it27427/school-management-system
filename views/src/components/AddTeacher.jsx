@@ -3,49 +3,48 @@ import Card from '@/components/Card';
 import Form from '@/components/Form';
 import InputField from '@/components/InputField';
 
-const AddTeacher = ({
-  teacherName,
-  setTeacherName,
-  teacherEmail,
-  setTeacherEmail,
-  teacherSubject,
-  setTeacherSubject,
-  handleAddTeacher,
-}) => {
+const AddTeacher = ({ newTeacher, setNewTeacher, handleAddTeacher }) => {
   return (
     <Card>
       <Form
         onSubmit={handleAddTeacher}
+        method='POST'
         className='flex flex-col gap-4 max-w-xs md:max-w-md'
       >
         <InputField
           type='text'
-          id='studentname'
-          name='studentname'
+          id='name'
+          name='name'
           className='input input-bordered w-full'
-          onChange={(e) => setTeacherName(e.target.value)}
+          onChange={(e) =>
+            setNewTeacher({ ...newTeacher, name: e.target.value })
+          }
           placeholder='Enter Teacher Name'
-          value={teacherName}
+          value={newTeacher.name}
         />
 
         <InputField
           type='email'
-          id='teacheremail'
-          name='teacheremail'
+          id='email'
+          name='email'
           className='input input-bordered w-full'
-          onChange={(e) => setTeacherEmail(e.target.value)}
+          onChange={(e) =>
+            setNewTeacher({ ...newTeacher, email: e.target.value })
+          }
           placeholder='Enter Teacher Email'
-          value={teacherEmail}
+          value={newTeacher.email}
         />
 
         <InputField
           type='text'
-          id='teachersubject'
-          name='teachersubject'
+          id='subject'
+          name='subject'
           className='input input-bordered w-full'
-          onChange={(e) => setTeacherSubject(e.target.value)}
+          onChange={(e) =>
+            setNewTeacher({ ...newTeacher, subject: e.target.value })
+          }
           placeholder='Enter Teacher Subject'
-          value={teacherSubject}
+          value={newTeacher.subject}
         />
 
         <div className='flex justify-end'>

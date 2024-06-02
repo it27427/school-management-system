@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 import AdminLayout from '@/layouts/AdminLayout';
 
@@ -31,9 +32,9 @@ const AdminTeachers = () => {
     e.preventDefault();
 
     if (
-      newTeacher.name.trim() !== '' &&
-      newTeacher.email.trim() !== '' &&
-      newTeacher.subject.trim() !== ''
+      newTeacher.name !== '' &&
+      newTeacher.email !== '' &&
+      newTeacher.subject !== ''
     ) {
       try {
         const url = 'http://localhost:8080/api/v1/teachers';
@@ -59,12 +60,11 @@ const AdminTeachers = () => {
           <AddTeacher
             newTeacher={newTeacher}
             setNewTeacher={setNewTeacher}
-            teachers={teachers}
             handleAddTeacher={handleAddNewTeacher}
           />
         </div>
 
-        <TeachersList />
+        <TeachersList teachers={teachers} />
       </div>
     </AdminLayout>
   );
