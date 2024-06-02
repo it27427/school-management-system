@@ -9,10 +9,11 @@ const createStudent = async (req, res, next) => {
       handleValidationError('Please fill up full form', 400);
     }
 
-    await Student.create({ name, registrationNumber, grade });
+    const student = await Student.create({ name, registrationNumber, grade });
     res.status(201).json({
       success: true,
       message: 'Student Created Successfully!',
+      student,
     });
   } catch (error) {
     next(error);

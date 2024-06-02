@@ -41,12 +41,9 @@ const AdminStudents = () => {
       try {
         const url = 'http://localhost:8080/api/v1/students';
         const response = await axios.post(url, newStudent);
-        if (response.data && response.data.student) {
-          setStudents([...students, response.data.student]);
-          setNewStudent({ name: '', registrationNumber: '', grade: '' });
-        } else {
-          console.error('Unexpected response structure', response);
-        }
+        console.log(response.data);
+        setStudents([...students, response.data.student]);
+        setNewStudent({ name: '', registrationNumber: '', grade: '' });
       } catch (error) {
         console.error('Student Adding Error', error);
       }
@@ -71,6 +68,7 @@ const AdminStudents = () => {
               <InputField
                 type='text'
                 id='name'
+                name='name'
                 className='input input-bordered w-full'
                 onChange={(e) =>
                   setNewStudent({ ...newStudent, name: e.target.value })
@@ -82,6 +80,7 @@ const AdminStudents = () => {
               <InputField
                 type='text'
                 id='registrationNumber'
+                name='registrationNumber'
                 className='input input-bordered w-full'
                 onChange={(e) =>
                   setNewStudent({
@@ -96,6 +95,7 @@ const AdminStudents = () => {
               <InputField
                 type='text'
                 id='grade'
+                name='grade'
                 className='input input-bordered w-full'
                 onChange={(e) =>
                   setNewStudent({ ...newStudent, grade: e.target.value })
