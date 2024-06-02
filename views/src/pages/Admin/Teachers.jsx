@@ -5,7 +5,7 @@ import AdminLayout from '@/layouts/AdminLayout';
 import AddTeacher from '@/components/AddTeacher';
 import TeachersList from '@/components/TeachersList';
 
-const Teachers = () => {
+const AdminTeachers = () => {
   const [teacherName, setTeacherName] = useState('');
   const [teacherEmail, setTeacherEmail] = useState('');
   const [teacherSubject, setTeacherSubject] = useState('');
@@ -38,4 +38,4 @@ const Teachers = () => {
   );
 };
 
-export default Teachers;
+export default AdminTeachers;

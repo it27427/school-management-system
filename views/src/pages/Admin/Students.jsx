@@ -8,7 +8,7 @@ import Card from '@/components/Card';
 import Form from '@/components/Form';
 import InputField from '@/components/InputField';
 
-const Students = () => {
+const AdminStudents = () => {
   const [newStudent, setNewStudent] = useState({
     name: '',
     regNumber: '',
@@ -26,22 +26,20 @@ const Students = () => {
     }
   };
 
-  const handleAddStudent = (e) => {
+  const handleAddNewStudent = async (e) => {
     e.preventDefault();
 
-    if (newStudent.name.trim() !== '' && newStudent.regNumber.trim() !== '' && newStudent.grade.trim() !== '') {
+    if (
+      newStudent.name.trim() !== '' &&
+      newStudent.regNumber.trim() !== '' &&
+      newStudent.grade.trim() !== ''
+    ) {
       try {
         const url = 'http://localhost:8080/api/v1/students';
-        const response = await axios.post(url, { grade: newClassName });
-        setClasses((pervStudents) => {
-          if (Array.isArray(pervStudents)) {
-            return [...pervStudents, response.data];
-          } else {
-            console.error('Error While Adding Student', pervStudents);
-            return [];
-          }
-        });
-        setNewClassName('');
+        const response = await axios.post(url, newStudent);
+        console.log(response.data);
+        setStudents([...students, response.data.student]);
+        setNewStudent({ name: '', regNumber: '', grade: '' });
       } catch (error) {
         console.error('Student Fetching Error', error);
       }
@@ -50,7 +48,6 @@ const Students = () => {
 
   useEffect(() => {
     fetchStudents();
-    handleAddStudent();
   }, []);
 
   return (
@@ -61,7 +58,7 @@ const Students = () => {
 
           <Card>
             <Form
-              onSubmit={handleAddStudent}
+              onSubmit={handleAddNewStudent}
               className='flex flex-col gap-4 max-w-xs md:max-w-md'
             >
               <InputField
@@ -69,9 +66,11 @@ const Students = () => {
                 id='studentname'
                 name='studentname'
                 className='input input-bordered w-full'
-                // onChange={(e) => setStudentName(e.target.value)}
+                onChange={(e) =>
+                  setNewStudent({ ...newStudent, name: e.target.value })
+                }
                 placeholder='Enter Student Name'
-                // value={studentName}
+                value={newStudent.name}
               />
 
               <InputField
@@ -79,9 +78,11 @@ const Students = () => {
                 id='studregnumber'
                 name='studregnumber'
                 className='input input-bordered w-full'
-                // onChange={(e) => setStudentRegNumber(e.target.value)}
+                onChange={(e) =>
+                  setNewStudent({ ...newStudent, regNumber: e.target.value })
+                }
                 placeholder='Enter Registration Number'
-                // value={studentRegNumber}
+                value={newStudent.regNumber}
               />
 
               <InputField
@@ -89,9 +90,11 @@ const Students = () => {
                 id='studgrade'
                 name='studgrade'
                 className='input input-bordered w-full'
-                // onChange={(e) => setStudentGrade(e.target.value)}
+                onChange={(e) =>
+                  setNewStudent({ ...newStudent, grade: e.target.value })
+                }
                 placeholder='Enter Student Grade'
-                // value={studentGrade}
+                value={newStudent.grade}
               />
 
               <div className='flex justify-end'>
@@ -105,10 +108,20 @@ const Students = () => {
 
         <div className='flex flex-col gap-6'>
           <h2 className='font-bold text-xl uppercase'>Students List</h2>
+
+          <ul>
+            {students.map((student, index) => (
+              <li key={index}>
+                <span>Name: {student.name}</span>
+                <span>Registration Number: {student.regNumber}</span>
+                <span>Grade: {student.grade}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </AdminLayout>
   );
 };
 
-export default Students;
+export default AdminStudents;

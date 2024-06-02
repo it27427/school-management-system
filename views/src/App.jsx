@@ -24,8 +24,8 @@ import AdminExam from '@/pages/Admin/Exam';
 import AdminLibrary from '@/pages/Admin/Library';
 import AdminPerformance from '@/pages/Admin/Performance';
 import SettingsProfile from '@/pages/Admin/SettingsProfile';
-import Students from '@/pages/Admin/Students';
-import Teachers from '@/pages/Admin/Teachers';
+import AdminStudents from '@/pages/Admin/Students';
+import AdminTeachers from '@/pages/Admin/Teachers';
 
 /* STUDENT */
 import StudentAnnouncement from '@/pages/Students/Announcement';
@@ -81,8 +81,8 @@ const App = () => {
         <Route path='/admin/library' element={<AdminLibrary />} />
         <Route path='/admin/performance' element={<AdminPerformance />} />
         <Route path='/admin/settings' element={<SettingsProfile />} />
-        <Route path='/admin/students' element={<Students />} />
-        <Route path='/admin/teachers' element={<Teachers />} />
+        <Route path='/admin/students' element={<AdminStudents />} />
+        <Route path='/admin/teachers' element={<AdminTeachers />} />
 
         {/* STUDENT */}
         <Route path='/student/announcement' element={<StudentAnnouncement />} />
