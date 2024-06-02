@@ -41,7 +41,6 @@ const AdminStudents = () => {
       try {
         const url = 'http://localhost:8080/api/v1/students';
         const response = await axios.post(url, newStudent);
-        console.log(response.data);
         setStudents([...students, response.data.student]);
         setNewStudent({ name: '', registrationNumber: '', grade: '' });
       } catch (error) {
