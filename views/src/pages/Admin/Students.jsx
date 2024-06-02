@@ -11,10 +11,10 @@ import InputField from '@/components/InputField';
 const AdminStudents = () => {
   const [newStudent, setNewStudent] = useState({
     name: '',
-    regNumber: '',
+    registrationNumber: '',
     grade: '',
   });
-  const [students, setStudents] = useState('');
+  const [students, setStudents] = useState([]);
 
   const fetchStudents = async () => {
     try {
@@ -31,15 +31,14 @@ const AdminStudents = () => {
 
     if (
       newStudent.name.trim() !== '' &&
-      newStudent.regNumber.trim() !== '' &&
+      newStudent.registrationNumber.trim() !== '' &&
       newStudent.grade.trim() !== ''
     ) {
       try {
         const url = 'http://localhost:8080/api/v1/students';
         const response = await axios.post(url, newStudent);
-        console.log(response.data);
         setStudents([...students, response.data.student]);
-        setNewStudent({ name: '', regNumber: '', grade: '' });
+        setNewStudent({ name: '', registrationNumber: '', grade: '' });
       } catch (error) {
         console.error('Student Fetching Error', error);
       }
@@ -59,12 +58,12 @@ const AdminStudents = () => {
           <Card>
             <Form
               onSubmit={handleAddNewStudent}
+              method='POST'
               className='flex flex-col gap-4 max-w-xs md:max-w-md'
             >
               <InputField
                 type='text'
-                id='studentname'
-                name='studentname'
+                id='name'
                 className='input input-bordered w-full'
                 onChange={(e) =>
                   setNewStudent({ ...newStudent, name: e.target.value })
@@ -75,20 +74,21 @@ const AdminStudents = () => {
 
               <InputField
                 type='text'
-                id='studregnumber'
-                name='studregnumber'
+                id='registrationNumber'
                 className='input input-bordered w-full'
                 onChange={(e) =>
-                  setNewStudent({ ...newStudent, regNumber: e.target.value })
+                  setNewStudent({
+                    ...newStudent,
+                    registrationNumber: e.target.value,
+                  })
                 }
                 placeholder='Enter Registration Number'
-                value={newStudent.regNumber}
+                value={newStudent.registrationNumber}
               />
 
               <InputField
                 type='text'
-                id='studgrade'
-                name='studgrade'
+                id='grade'
                 className='input input-bordered w-full'
                 onChange={(e) =>
                   setNewStudent({ ...newStudent, grade: e.target.value })
@@ -109,15 +109,29 @@ const AdminStudents = () => {
         <div className='flex flex-col gap-6'>
           <h2 className='font-bold text-xl uppercase'>Students List</h2>
 
-          <ul>
-            {students.map((student, index) => (
-              <li key={index}>
-                <span>Name: {student.name}</span>
-                <span>Registration Number: {student.regNumber}</span>
-                <span>Grade: {student.grade}</span>
-              </li>
-            ))}
-          </ul>
+          <Card>
+            <div className='overflow-x-auto'>
+              <table className='table'>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Registration Number</th>
+                    <th>Grade</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  {students.map((student, index) => (
+                    <tr key={index}>
+                      <th>{student.name}</th>
+                      <th>{student.registrationNumber}</th>
+                      <th>{student.grade}</th>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </Card>
         </div>
       </div>
     </AdminLayout>
