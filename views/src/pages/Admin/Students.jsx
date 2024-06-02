@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 import AdminLayout from '@/layouts/AdminLayout';
@@ -19,9 +20,9 @@ const Students = () => {
     try {
       const url = 'http://localhost:8080/api/v1/students/getall';
       const response = await axios.get(url);
-      setEvents(response.data.events || []);
+      setNewStudent(response.data.students);
     } catch (error) {
-      console.error('Event Fetching Error', error);
+      console.error('Students Fetching Error', error);
     }
   };
 
