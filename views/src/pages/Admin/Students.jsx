@@ -20,29 +20,38 @@ const Students = () => {
     try {
       const url = 'http://localhost:8080/api/v1/students/getall';
       const response = await axios.get(url);
-      setNewStudent(response.data.students);
+      setStudents(response.data.students);
     } catch (error) {
       console.error('Students Fetching Error', error);
     }
   };
 
-  const fetchAnnouncements = async () => {
-    try {
-      const url = 'http://localhost:8080/api/v1/announcement/getall';
-      const response = await axios.get(url);
-      setAnnouncements(response.data.announcements || []);
-      console.log(response.data.announcements);
-    } catch (error) {
-      console.error('Announcement Fetching Error', error);
+  const handleAddStudent = (e) => {
+    e.preventDefault();
+
+    if (newStudent.name.trim() !== '' && newStudent.regNumber.trim() !== '' && newStudent.grade.trim() !== '') {
+      try {
+        const url = 'http://localhost:8080/api/v1/students';
+        const response = await axios.post(url, { grade: newClassName });
+        setClasses((pervStudents) => {
+          if (Array.isArray(pervStudents)) {
+            return [...pervStudents, response.data];
+          } else {
+            console.error('Error While Adding Student', pervStudents);
+            return [];
+          }
+        });
+        setNewClassName('');
+      } catch (error) {
+        console.error('Student Fetching Error', error);
+      }
     }
   };
 
-  const handleAddStudent = (e) => {
-    e.preventDefault();
-    console.log('Student Added');
-  };
-
-  useEffect(() => {}, []);
+  useEffect(() => {
+    fetchStudents();
+    handleAddStudent();
+  }, []);
 
   return (
     <AdminLayout>
