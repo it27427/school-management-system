@@ -20,7 +20,11 @@ const AdminStudents = () => {
     try {
       const url = 'http://localhost:8080/api/v1/students/getall';
       const response = await axios.get(url);
-      setStudents(response.data.students);
+      if (response.data && response.data.students) {
+        setStudents(response.data.students);
+      } else {
+        console.error('Unexpected response structure', response);
+      }
     } catch (error) {
       console.error('Students Fetching Error', error);
     }
@@ -37,10 +41,14 @@ const AdminStudents = () => {
       try {
         const url = 'http://localhost:8080/api/v1/students';
         const response = await axios.post(url, newStudent);
-        setStudents([...students, response.data.student]);
-        setNewStudent({ name: '', registrationNumber: '', grade: '' });
+        if (response.data && response.data.student) {
+          setStudents([...students, response.data.student]);
+          setNewStudent({ name: '', registrationNumber: '', grade: '' });
+        } else {
+          console.error('Unexpected response structure', response);
+        }
       } catch (error) {
-        console.error('Student Fetching Error', error);
+        console.error('Student Adding Error', error);
       }
     }
   };
@@ -58,8 +66,7 @@ const AdminStudents = () => {
           <Card>
             <Form
               onSubmit={handleAddNewStudent}
-              method='POST'
-              className='flex flex-col gap-4 max-w-xs md:max-w-md'
+              className='flex flex-col gap-4 md:max-w-md'
             >
               <InputField
                 type='text'
@@ -110,9 +117,9 @@ const AdminStudents = () => {
           <h2 className='font-bold text-xl uppercase'>Students List</h2>
 
           <Card>
-            <div className='overflow-x-auto'>
+            <div className='lg:max-h-64 overflow-hidden lg:overflow-y-scroll'>
               <table className='table'>
-                <thead>
+                <thead className='sticky top-0 w-full bg-white'>
                   <tr>
                     <th>Name</th>
                     <th>Registration Number</th>
@@ -123,9 +130,9 @@ const AdminStudents = () => {
                 <tbody>
                   {students.map((student, index) => (
                     <tr key={index}>
-                      <th>{student.name}</th>
-                      <th>{student.registrationNumber}</th>
-                      <th>{student.grade}</th>
+                      <td>{student.name}</td>
+                      <td>{student.registrationNumber}</td>
+                      <td>{student.grade}</td>
                     </tr>
                   ))}
                 </tbody>
