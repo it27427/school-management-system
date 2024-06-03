@@ -5,10 +5,8 @@ import ExamsList from '@/components/ExamsList';
 import AdminLayout from '@/layouts/AdminLayout';
 
 const AdminExam = () => {
-  const [name, setName] = useState('');
-  const [regNumber, setRegNumber] = useState('');
-  const [examClass, setExamClass] = useState('');
   const [marks, setMarks] = useState('');
+  const [exams, setExams] = useState([]);
 
   const handleAddExam = (e) => {
     e.preventDefault();
@@ -21,20 +19,10 @@ const AdminExam = () => {
         <div className='flex flex-col gap-6'>
           <h2 className='font-bold text-xl uppercase'>Exam Details</h2>
 
-          <AddExam
-            name={name}
-            setName={setName}
-            regNumber={regNumber}
-            setRegNumber={setRegNumber}
-            examClass={examClass}
-            setExamClass={setExamClass}
-            marks={marks}
-            setMarks={setMarks}
-            handleAddExam={handleAddExam}
-          />
+          <AddExam name={name} handleAddExam={handleAddExam} />
         </div>
 
-        <ExamsList />
+        <ExamsList exams={exams} />
       </div>
     </AdminLayout>
   );
