@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 import AddAssignment from '@/components/AddAssignment';
 import AssignmentList from '@/components/AssignmentList';
@@ -13,10 +14,48 @@ const AdminAssignment = () => {
   });
   const [assignments, setAssignments] = useState([]);
 
-  const handleAddNewAssignment = (e) => {
-    e.preventDefault();
-    console.log('Assignment Added');
+  const fetchAssignments = async () => {
+    try {
+      const url = 'http://localhost:8080/api/v1/assignment/getall';
+      const response = await axios.get(url);
+      if (response.data && response.data.assignments) {
+        setAssignments(response.data.assignments);
+      } else {
+        console.error('Unexpected response structure', response);
+      }
+    } catch (error) {
+      console.error('Assignments Fetching Error', error);
+    }
   };
+
+  const handleAddNewAssignment = async (e) => {
+    e.preventDefault();
+
+    if (
+      newAssignment.title.trim() !== '' &&
+      newAssignment.description.trim() !== '' &&
+      newAssignment.grade.trim() !== '' &&
+      newAssignment.deadline.trim() !== ''
+    ) {
+      try {
+        const url = 'http://localhost:8080/api/v1/assignment';
+        const response = await axios.post(url, newAssignment);
+        setAssignments([...assignments, response.data.assignment]);
+        setNewAssignment({
+          title: '',
+          description: '',
+          grade: '',
+          deadline: '',
+        });
+      } catch (error) {
+        console.error('Assignment Adding Error', error);
+      }
+    }
+  };
+
+  useEffect(() => {
+    fetchAssignments();
+  }, []);
 
   return (
     <AdminLayout>

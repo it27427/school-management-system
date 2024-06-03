@@ -9,6 +9,8 @@ const createAssignment = async (req, res, next) => {
       handleValidationError('Please fill up full form', 400);
     }
 
+    // const formattedDate = deadline.slice(0, 10);
+
     const assignment = await Assignment.create({
       title,
       description,

@@ -18,7 +18,7 @@ const AddAssignment = ({
       >
         <InputField
           type='text'
-          id='assignmentTitle'
+          id='title'
           name='title'
           className='input input-bordered w-full'
           onChange={(e) =>
@@ -29,7 +29,7 @@ const AddAssignment = ({
         />
 
         <TextArea
-          id='assignmentDescription'
+          id='description'
           name='description'
           className='textarea textarea-bordered resize-none w-full'
           onChange={(e) =>
