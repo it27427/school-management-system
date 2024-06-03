@@ -13,6 +13,7 @@ const AddAssignment = ({
     <Card>
       <Form
         onSubmit={handleAddAssignment}
+        method='POST'
         className='flex flex-col gap-4 max-w-xs md:max-w-md'
       >
         <InputField
