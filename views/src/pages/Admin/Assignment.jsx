@@ -5,12 +5,15 @@ import AssignmentList from '@/components/AssignmentList';
 import AdminLayout from '@/layouts/AdminLayout';
 
 const AdminAssignment = () => {
-  const [assignmentTitle, setAssignmentTitle] = useState('');
-  const [assignmentDescription, setAssignmentDescription] = useState('');
-  const [assignmentGrade, setAssignmentGrade] = useState('');
-  const [deadline, setDeadline] = useState('');
+  const [newAssignment, setNewAssignment] = useState({
+    title: '',
+    description: '',
+    grade: '',
+    deadline: '',
+  });
+  const [assignments, setAssignments] = useState([]);
 
-  const handleAddAssignment = (e) => {
+  const handleAddNewAssignment = (e) => {
     e.preventDefault();
     console.log('Assignment Added');
   };
@@ -22,19 +25,13 @@ const AdminAssignment = () => {
           <h2 className='font-bold text-xl uppercase'>Add Assignment</h2>
 
           <AddAssignment
-            assignmentTitle={assignmentTitle}
-            setAssignmentTitle={setAssignmentTitle}
-            assignmentDescription={assignmentDescription}
-            setAssignmentDescription={setAssignmentDescription}
-            assignmentGrade={assignmentGrade}
-            setAssignmentGrade={setAssignmentGrade}
-            deadline={deadline}
-            setDeadline={setDeadline}
-            handleAddAssignment={handleAddAssignment}
+            newAssignment={newAssignment}
+            setNewAssignment={setNewAssignment}
+            handleAddAssignment={handleAddNewAssignment}
           />
         </div>
 
-        <AssignmentList />
+        <AssignmentList assignments={assignments} />
       </div>
     </AdminLayout>
   );

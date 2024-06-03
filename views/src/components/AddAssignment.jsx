@@ -5,14 +5,8 @@ import InputField from '@/components/InputField';
 import TextArea from '@/components/TextArea';
 
 const AddAssignment = ({
-  assignmentTitle,
-  setAssignmentTitle,
-  assignmentDescription,
-  setAssignmentDescription,
-  assignmentGrade,
-  setAssignmentGrade,
-  deadline,
-  setDeadline,
+  newAssignment,
+  setNewAssignment,
   handleAddAssignment,
 }) => {
   return (
@@ -26,18 +20,25 @@ const AddAssignment = ({
           id='assignmentTitle'
           name='title'
           className='input input-bordered w-full'
-          onChange={(e) => setAssignmentTitle(e.target.value)}
+          onChange={(e) =>
+            setNewAssignment({ ...newAssignment, title: e.target.value })
+          }
           placeholder='Enter Assignment Title'
-          value={assignmentTitle}
+          value={newAssignment.title}
         />
 
         <TextArea
           id='assignmentDescription'
           name='description'
           className='textarea textarea-bordered resize-none w-full'
-          onChange={(e) => setAssignmentDescription(e.target.value)}
+          onChange={(e) =>
+            setNewAssignment({
+              ...newAssignment,
+              description: e.target.value,
+            })
+          }
           placeholder='Enter Assignment Description'
-          value={assignmentDescription}
+          value={newAssignment.description}
         />
 
         <InputField
@@ -45,19 +46,23 @@ const AddAssignment = ({
           id='grade'
           name='grade'
           className='input input-bordered w-full'
-          onChange={(e) => setAssignmentGrade(e.target.value)}
+          onChange={(e) =>
+            setNewAssignment({ ...newAssignment, grade: e.target.value })
+          }
           placeholder='Enter Assignment Grade'
-          value={assignmentGrade}
+          value={newAssignment.grade}
         />
 
         <InputField
-          type='text'
+          type='date'
           id='deadline'
           name='deadline'
           className='input input-bordered w-full'
-          onChange={(e) => setDeadline(e.target.value)}
+          onChange={(e) =>
+            setNewAssignment({ ...newAssignment, deadline: e.target.value })
+          }
           placeholder='Enter Assignment Deadline'
-          value={deadline}
+          value={newAssignment.deadline}
         />
 
         <div className='flex justify-end'>
