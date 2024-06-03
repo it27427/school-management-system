@@ -3,17 +3,7 @@ import Card from '@/components/Card';
 import Form from '@/components/Form';
 import InputField from '@/components/InputField';
 
-const AddExam = ({
-  name,
-  setName,
-  regNumber,
-  setRegNumber,
-  examClass,
-  setExamClass,
-  marks,
-  setMarks,
-  handleAddExam,
-}) => {
+const AddExam = ({ newExam, setNewExam, handleAddExam }) => {
   return (
     <Card>
       <Form
@@ -25,12 +15,12 @@ const AddExam = ({
 
           <InputField
             type='text'
-            id='examname'
-            name='examname'
+            id='name'
+            name='name'
             className='input input-bordered w-full'
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => setNewExam({ ...newExam, name: e.target.value })}
             placeholder='Enter Name'
-            value={name}
+            value={newExam.name}
           />
         </div>
 
@@ -39,12 +29,14 @@ const AddExam = ({
 
           <InputField
             type='text'
-            id='regnumber'
-            name='regnumber'
+            id='registrationNumber'
+            name='registrationNumber'
             className='input input-bordered w-full'
-            onChange={(e) => setRegNumber(e.target.value)}
+            onChange={(e) =>
+              setNewExam({ ...newExam, registrationNumber: e.target.value })
+            }
             placeholder='Enter Registration Number'
-            value={regNumber}
+            value={newExam.registrationNumber}
           />
         </div>
 
@@ -53,12 +45,14 @@ const AddExam = ({
 
           <InputField
             type='text'
-            id='examclass'
-            name='examclass'
+            id='className'
+            name='className'
             className='input input-bordered w-full'
-            onChange={(e) => setExamClass(e.target.value)}
+            onChange={(e) =>
+              setNewExam({ ...newExam, className: e.target.value })
+            }
             placeholder='Enter Exam Class'
-            value={examClass}
+            value={newExam.className}
           />
         </div>
 
@@ -70,9 +64,9 @@ const AddExam = ({
             id='marks'
             name='marks'
             className='input input-bordered w-full'
-            onChange={(e) => setMarks(e.target.value)}
+            onChange={(e) => setNewExam({ ...newExam, marks: e.target.value })}
             placeholder='Enter Exam Marks'
-            value={marks}
+            value={newExam.marks}
           />
         </div>
 

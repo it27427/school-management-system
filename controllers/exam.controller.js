@@ -9,10 +9,16 @@ const createExam = async (req, res, next) => {
       handleValidationError('Please fill up full form', 400);
     }
 
-    await Exam.create({ name, registrationNumber, className, marks });
+    const exam = await Exam.create({
+      name,
+      registrationNumber,
+      className,
+      marks,
+    });
     res.status(201).json({
       success: true,
       message: 'Exam Created Successfully!',
+      exam,
     });
   } catch (error) {
     next(error);
