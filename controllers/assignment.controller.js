@@ -9,11 +9,17 @@ const createAssignment = async (req, res, next) => {
       handleValidationError('Please fill up full form', 400);
     }
 
-    await Assignment.create({ title, description, grade, deadline });
+    const assignment = await Assignment.create({
+      title,
+      description,
+      grade,
+      deadline,
+    });
 
     res.status(201).json({
       success: true,
       message: 'Assignment Created Successfully!',
+      assignment,
     });
   } catch (error) {
     next(error);
