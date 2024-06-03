@@ -14,7 +14,7 @@ const AddAssignment = ({
       <Form
         onSubmit={handleAddAssignment}
         method='POST'
-        className='flex flex-col gap-4 max-w-xs md:max-w-md'
+        className='flex flex-col gap-4 w-full md:max-w-md'
       >
         <InputField
           type='text'

@@ -28,8 +28,14 @@ const AssignmentList = ({ assignments }) => {
             <tbody>
               {assignments.map((assignment, index) => (
                 <tr key={index}>
-                  <td>{assignment.title}</td>
-                  <td>{assignment.description}</td>
+                  <td title={assignment.title}>
+                    <span className='line-clamp-1'>{assignment.title}</span>
+                  </td>
+                  <td title={assignment.description}>
+                    <span className='line-clamp-2'>
+                      {assignment.description}
+                    </span>
+                  </td>
                   <td>{assignment.grade}</td>
                   <td>{formatDate(assignment.deadline)}</td>
                 </tr>
